@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<title>Johanssudd</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="shortcut icon" href="johan.png">
+<body>
+
+<style>
+@media screen and (max-width: 1300px) {
+.mobile {
+display: block;
+}
+.computer {
+display: none;
+}
+}
+@media screen and (min-width: 1300px) {
+.computer {
+display: block;
+}
+.mobile {
+display: none;
+}
+}
+</style>
+
+<script>
+
+var x;
+var animationInAction;
+
+function TShirt_Added() {
+
+x = sessionStorage.getItem("yT_Shirt") + 1;
+sessionStorage.setItem("yT_Shirt", x);
+
+sessionStorage.setItem("amountOfItems", sessionStorage.getItem("amountOfItems") + "1");
+document.getElementById("amountOfItemsTotal").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
+
+document.getElementById("T_ShirtAnimation").style.opacity = 0.1;
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.2; }, 10);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.3; }, 20);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.3; }, 30);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.4; }, 40);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.5; }, 50);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.6; }, 60);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.7; }, 70);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.8; }, 80);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.9; }, 90);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 1.0; }, 100);
+
+if (animationInAction !== "1") {
+
+animationInAction = "1";
+
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.9; }, 3100);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.8; }, 3110);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.7; }, 3120);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.6; }, 3130);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.5; }, 3140);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.4; }, 3150);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.3; }, 3160);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.2; }, 3170);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.1; }, 3180);
+setTimeout(function(){ document.getElementById("T_ShirtAnimation").style.opacity = 0.0; }, 3190);
+setTimeout(function(){ animationInAction = "0"; }, 3190);
+
+}
+
+sessionStorage.setItem("itemsT_Shirt", "Johans T-Shirt");
+sessionStorage.setItem("imgT_Shirt", "T-Shirt%20Front.png");
+sessionStorage.setItem("pricesT_Shirt", "199.99 kr");
+sessionStorage.setItem("pricesForTotalT_Shirt", "199.99");
+sessionStorage.setItem("amountT_Shirt", (sessionStorage.getItem("yT_Shirt").length));
+
+if (sessionStorage.getItem("Glans") !== "block") {
+sessionStorage.setItem("Glans", "none");
+}
+if (sessionStorage.getItem("Johan") !== "block") {
+sessionStorage.setItem("Johan", "none");
+}
+if (sessionStorage.getItem("StaySafe") !== "block") {
+sessionStorage.setItem("StaySafe", "none");
+}
+if (sessionStorage.getItem("Björkeby") !== "block") {
+sessionStorage.setItem("Björkeby", "none");
+}
+if (sessionStorage.getItem("Hood") !== "block") {
+sessionStorage.setItem("Hood", "none");
+}
+if (sessionStorage.getItem("Guld") !== "block") {
+sessionStorage.setItem("Guld", "none");
+}
+
+sessionStorage.setItem("T_Shirt", "block");
+
+if (sessionStorage.getItem("Hoodie") !== "block") {
+sessionStorage.setItem("Hoodie", "none");
+}
+if (sessionStorage.getItem("Kepa") !== "block") {
+sessionStorage.setItem("Kepa", "none");
+}
+}
+</script>
+
+<!-- Navbar (sit on top) -->
+<div class="computer">
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-xlarge w3-wide w3-padding w3-card ">
+    <a class="w3-bar-item w3-xlarge" style="margin-top: 10px"> Johanssudd</a>
+    <!-- Float links to the right. Hide them on small screens --> 
+    <div class="w3-right w3-small w3-hide-small" style="margin-top: 15px">
+      <a href="johanssudd.html" class="w3-bar-item w3-button">HEM</a>
+      <a href="om-oss.html" class="w3-bar-item w3-button">OM OSS</a>
+      <a href="vara-sudd.html" class="w3-bar-item w3-button">VÅRA SUDD</a>
+      <a href="merchandise.html" class="w3-bar-item w3-button">MERCHANDISE</a>
+      <a href="jobb.html" class="w3-bar-item w3-button">JOBB</a>
+      <a class="w3-bar-item w3-bar-none w3-xlarge" style="margin-top: -10px">|</a> 
+      <a href="kundvagn.html" class="w3-bar-item w3-button">KUNDVAGN</a>
+	  <p id="amountOfItemsTotal" class="w3-bar-item" style="margin-left: -10px; margin-top: -10px;"></p>
+    </div>
+  </div> 
+  </div> 
+  
+<script>
+document.getElementById("amountOfItemsTotal").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
+</script>
+
+<style>
+.button {
+border:none;display:inline-block;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap;
+-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;
+object-fit: contain;
+}
+.button:hover {
+border-style: groove; 
+border-width: 1px;
+border-color: gray;
+}
+
+html, body, h4 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+}
+h1 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+font-size: 55px;
+color: #393939;
+}
+h2 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+font-size: 36px;
+color: #393939;
+}
+h3 {
+font-size: 18px;
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+color: #393939;
+}
+h5 {
+font-family: sans-serif;
+text-align: center;
+}
+h6 {
+font-family: sans-serif;
+font-size: 14px;
+text-align: center;
+}
+.footer {
+position: absolute;
+bottom: 0px;
+width: 100%;
+}
+</style>
+  
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:10000px;" id="home">
+<br>
+<br>
+<br>
+<div id="T_ShirtAnimation" class="w3-card-4 animate1" style="width: 20%; margin-left: 79%; letter-spacing: 2px; opacity: 0.0;">
+<hr>
+<h2>Tack!</h2>
+<h4>Johans T-Shirt</h4>
+<img src="T-Shirt%20Front.png" width="60%" height="50%">
+<h5>är nu i kundvagnen!</h5>
+<br>
+</div>
+<div style="width: 50%; margin-left: 25%; margin-top: -13%; letter-spacing: 1px;">
+<div style="padding-left: 50%;">
+<h1><b>Johans T-Shirt</b></h1>
+<h5>Ett klädesplagg passande för vädret vi upplever just nu.</h5>
+<h2><b>199,99 kr</b></h2>
+<br>
+<button onclick="TShirt_Added()" class="button" style="margin: auto; background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
+</div>
+</div>
+<div style="width: 50%; margin-left: 25%;">
+<img style="margin-left: -50%; margin-top: -35%;" src="T-Shirt%20Front.png" alt:"Johans T_Shirt">
+</div>
+</header>
+
+<div class="w3-card-4 footer" style="background-color:rgba(0,0,0,.15);">
+<br>
+<h6 style="font-family:Roboto,Arial,sans-serif;color:rgba(0,0,0,.8);"><i>Johanssudd - Sudda bort dina pengar!</i></h6>
+<a href="https://instagram.com"><img src="https://toppng.com/uploads/preview/logo-facebook-instagram-email-11549824855rohhy6rugp.png" alt="Instagram Logo" width="20" height="20"></a>
+<a href="mailto:torsten.andersson.peppa.pig@gmail.com"><img src="https://pluspng.com/img-png/email-icon-png-download-icons-logos-emojis-email-icons-2400.png" alt="Mail Logo" width="30" height="20"></a>
+<br>
+<br>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mobile"> 
+
+<script>
+
+function menu() {
+document.getElementById("menuDiv").style.visibility = "visible";
+
+document.getElementById("menuDiv").style.opacity = 0.1;
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.2; }, 10);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.3; }, 20);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.3; }, 30);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.4; }, 40);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.5; }, 50);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.6; }, 60);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.7; }, 70);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.8; }, 80);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.9; }, 90);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 1.0; }, 100);
+}
+function noMenu() {
+
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.9; }, 10);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.8; }, 20);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.7; }, 30);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.6; }, 40);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.5; }, 50);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.4; }, 60);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.3; }, 70);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.2; }, 80);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.1; }, 90);
+setTimeout(function(){ document.getElementById("menuDiv").style.visibility = "hidden"; }, 100);
+}
+</script>
+
+<style>
+html, body, h4 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+}
+h1 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+font-size: 55px;
+color: #393939;
+}
+h2 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+font-size: 36px;
+color: #393939;
+}
+h3 {
+font-size: 18px;
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+color: #393939;
+}
+h5 {
+font-family: sans-serif;
+text-align: center;
+}
+h6 {
+font-family: sans-serif;
+font-size: 14px;
+text-align: center;
+}
+</style>
+
+<script>
+document.addEventListener("click", (evt) => {
+    const flyoutElement = document.getElementById("menuDiv");
+	const flyoutElement2 = document.getElementById("menuButton");
+    let targetElement = evt.target;
+
+    do {
+        if (targetElement == flyoutElement || targetElement == flyoutElement2) {
+            return;
+        }
+        targetElement = targetElement.parentNode;
+    } while (targetElement);
+
+    noMenu();
+});
+</script>
+
+<!-- Header -->
+<header id="headerDiv" class="w3-display-container w3-content w3-wide" style="min-width: 100%; z-index: 3;">
+<br>
+<h5 style="color: black; text-align: left; width: 30px; height: 30px; letter-spacing: 1px; font-size: 200%; padding-left: 18px; font-weight: 300; font-family: Playfair Display;"><a href="Johanssudd.html" style="text-decoration: none;">Johanssudd</a></h5>
+
+<img id="menuButton" src="Menu%20Icon2.png" onclick="menu()" alt="Kundvagn" width="45px" height="40px" style="margin-left: 57%; margin-top: -65px; cursor: pointer; z-index: 5;">
+
+<div style="margin-right: -30%; margin-top: -60px;">
+<a href="kundvagn.html"><img src="Shopping%20Cart2.png" alt="Kundvagn" width="30px" height="30px" style="cursor: pointer;"></a>
+<p id="amountOfItemsTotalMobile" width="40px" height="40px" style="margin-top: -42px; margin-right: -45px; color: black;"></p>
+</div>
+
+<div id="menuDiv" class="w3-card-4" style="visibility: hidden; width: 75%; margin-left: 60%; height: 845px; background-color: white; position: absolute; right: 0px; top: 0px; z-index: 5;">
+<h5 onclick="noMenu()" style="color: grey; position: absolute; right: 20px; cursor: pointer;">X</h5>
+<br>
+<br>
+<h5><a href="Johanssudd.html">Hem</a></h5>
+<hr>
+<h5><a href="om-oss.html">Om Oss</a></h5>
+<hr>
+<h5><a href="vara-sudd.html">Våra sudd</a></h5>
+<hr>
+<h5><a href="merchandise.html">Merchandise</a></h5>
+<hr>
+<h5><a href="jobb.html">Jobb</a></h5>
+<hr>
+</div>
+</header>
+
+<script>
+document.getElementById("amountOfItemsTotalMobile").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
+</script>
+
+<script>
+
+var x;
+var inAction = 0;
+
+function sudd_T_Shirt_AddedMobile() {
+
+document.getElementById("br").style.display = "none";
+sessionStorage.setItem("BR", "none");
+
+document.getElementById("kundvagnButton").innerHTML = "Lägg i kundvagnen";
+setTimeout(function(){ document.getElementById("kundvagnButton").innerHTML = "Lagd i kundvagnen!"; }, 100);
+
+inAction = inAction + 1;
+setTimeout(function(){ inAction = inAction - 1; }, 2000);
+
+setTimeout(function(){ if (inAction == 0) {document.getElementById("kundvagnButton").innerHTML = "Lägg i kundvagnen";} }, 2000);
+
+if (inAction == 0) {document.getElementById("kundvagnButton").innerHTML = "Lägg i kundvagnen";}
+
+x = sessionStorage.getItem("yT_Shirt") + 1;
+sessionStorage.setItem("yT_Shirt", x);
+
+sessionStorage.setItem("amountOfItems", sessionStorage.getItem("amountOfItems") + "1");
+document.getElementById("amountOfItemsTotalMobile").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
+document.getElementById("amountOfItemsTotal").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
+
+sessionStorage.setItem("itemsT_Shirt", "Johans T-Shirt");
+sessionStorage.setItem("imgT_Shirt", "T-Shirt%20Front.png");
+sessionStorage.setItem("pricesT_Shirt", "199.99 kr");
+sessionStorage.setItem("pricesForTotalT_Shirt", "199.99");
+sessionStorage.setItem("amountT_Shirt", (sessionStorage.getItem("yT_Shirt").length));
+
+if (sessionStorage.getItem("Glans") !== "block") {
+sessionStorage.setItem("Glans", "none");
+}
+if (sessionStorage.getItem("Johan") !== "block") {
+sessionStorage.setItem("Johan", "none");
+}
+if (sessionStorage.getItem("StaySafe") !== "block") {
+sessionStorage.setItem("StaySafe", "none");
+}
+if (sessionStorage.getItem("Björkeby") !== "block") {
+sessionStorage.setItem("Björkeby", "none");
+}
+if (sessionStorage.getItem("Hood") !== "block") {
+sessionStorage.setItem("Hood", "none");
+}
+if (sessionStorage.getItem("Guld") !== "block") {
+sessionStorage.setItem("Guld", "none");
+}
+
+sessionStorage.setItem("T_Shirt", "block");
+
+if (sessionStorage.getItem("Hoodie") !== "block") {
+sessionStorage.setItem("Hoodie", "none");
+}
+if (sessionStorage.getItem("Kepa") !== "block") {
+sessionStorage.setItem("Kepa", "none");
+}
+}
+</script>
+  
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:10000px;" id="home">
+<br>
+<br id="br">
+<br>
+<br>
+<div style="width: 100%; margin: auto; letter-spacing: 1px;">
+<h1><b>Johans T-Shirt</b></h1>
+<img src="T-Shirt%20Front.png" alt:"Johans T-Shirt">
+<h5>Ett klädesplagg passande för vädret vi upplever just nu.</h5>
+<h2><b>9,99 kr</b></h2>
+<br>
+<button onclick="sudd_T_Shirt_AddedMobile()" id="kundvagnButton" class="button" style="background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
+</div>
+</header>
+</div>
+
+<script>
+document.getElementById("br").style.display = sessionStorage.getItem("BR"); 
+</script>
+
+</body>
+</html>
