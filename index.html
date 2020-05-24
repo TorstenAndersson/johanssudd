@@ -9,9 +9,6 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="shortcut icon" href="johan.png">
 
-<script>
-document.getElementById("amountOfItemsTotal").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
-</script>
 </head>
 <style>
 @media screen and (max-width: 1300px) {
@@ -52,6 +49,10 @@ display: none;
     </div>
   </div>                  
 </div>
+
+<script>
+document.getElementById("amountOfItemsTotal").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
+</script>
 
 <style>
 html, body, h4 {
