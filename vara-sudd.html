@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<title>Johanssudd</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="shortcut icon" href="johan.png">
+<body>
+
+<style>
+@media screen and (max-width: 1300px) {
+.mobile {
+display: block;
+}
+.computer {
+display: none;
+}
+}
+@media screen and (min-width: 1300px) {
+.computer {
+display: block;
+}
+.mobile {
+display: none;
+}
+}
+</style>
+
+<!-- Navbar (sit on top) -->
+<div class="computer">
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-xlarge w3-wide w3-padding w3-card ">
+    <a class="w3-bar-item w3-xlarge" style="margin-top: 10px"> Johanssudd</a>
+    <!-- Float links to the right. Hide them on small screens --> 
+    <div class="w3-right w3-small w3-hide-small" style="margin-top: 15px">
+      <a href="johanssudd.html" class="w3-bar-item w3-button">HEM</a>
+      <a href="om-oss.html" class="w3-bar-item w3-button">OM OSS</a>
+      <a href="" class="w3-bar-item w3-button">VÅRA SUDD</a>
+      <a href="merchandise.html" class="w3-bar-item w3-button">MERCHANDISE</a>
+      <a href="jobb.html" class="w3-bar-item w3-button">JOBB</a>
+      <a class="w3-bar-item w3-bar-none w3-xlarge" style="margin-top: -10px">|</a> 
+      <a href="kundvagn.html" class="w3-bar-item w3-button">KUNDVAGN</a>
+	  <p id="amountOfItemsTotal" class="w3-bar-item" style="margin-left: -10px; margin-top: -10px;"></p>
+    </div>
+  </div>                       
+</div>
+
+<script>
+document.getElementById("amountOfItemsTotal").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
+</script>
+
+<style>
+.button {
+border:none;display:inline-block;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap;
+-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;
+object-fit: contain;
+}
+.button:hover {
+border-style: groove; 
+border-width: 1px;
+border-color: gray;
+}
+
+html, body, h4 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+}
+h1 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+font-size: 55px;
+color: #393939;
+}
+h2 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+font-size: 36px;
+color: #393939;
+}
+h3 {
+font-size: 18px;
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+color: #393939;
+}
+h5 {
+font-family: sans-serif;
+text-align: center;
+}
+h6 {
+font-family: sans-serif;
+font-size: 14px;
+text-align: center;
+}
+</style>
+
+<!-- Header -->
+<br>
+<br>
+<br>
+<header class="w3-display-container w3-content w3-wide" style="max-width:10000px";>
+  <img class="w3-image" src="Johan%20forehead.JPG" alt="Johan" width="10000" height="0">
+  <div class="w3-display-middle w3-margin-top w3-center">
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:10000px">
+
+<br>
+<br>
+<br> 
+<br>
+<br>
+<h1><b>VÅRA SUDD</b></h1>
+<h5><i>Vår eleganta kollektion av radergummin.</i></h5>
+<br>
+<br>
+<br>
+<div style="width: 100%">
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+<a href="sudd-glans.html"><div class="button">
+<img src="Sudd%20Glans.JPG" alt:"Sudd Glans"><h5 style="color: #393939;">Sudd Glans<br>9,99 kr</h5>
+</div></a>
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+<a href="sudd-johan.html"><div class="button">
+<img src="Sudd%20Johan.png" alt:"Sudd Johan"><h5 style="color: #393939;">Sudd Johan<br>14,99 kr</h5>
+</div></a>
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+<a href="sudd-stay-safe.html"><div class="button">
+<img src="Sudd%20Stay%20Safe.JPG" alt:"Sudd Stay Safe"><h5 style="color: #393939;">Sudd Stay Safe<br>49,99 kr</h5>
+</div></a>
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+<a href="sudd-bjorkeby.html"><div class="button">
+<img src="Sudd%20Björkeby.JPG" alt:"Sudd Björkeby"><h5 style="color: #393939;">Sudd Björkeby<br>749,99 kr</h5>
+</div></a>
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+<a href="sudd-hood.html"><div class="button">
+<img src="Sudd%20Hood.JPG" alt:"Sudd Hood"><h5 style="color: #393939;">Sudd Hood<br>999,99 kr</h5>
+</div></a>
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+<a href="sudd-guld.html"><div class="button">
+<img src="Sudd%20Guld.png" alt:"Sudd Guld"><h5 style="color: #393939;">Sudd Guld<br>1499,99 kr</h5>
+</div></a>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+
+<div class="w3-card-4" style="background-color:rgba(0,0,0,.15)">
+<br>
+<h6 style="font-family:Roboto,Arial,sans-serif;color:rgba(0,0,0,.8);"><i>Johanssudd - Sudda bort dina pengar!</i></h6>
+<a href="https://instagram.com"><img src="https://toppng.com/uploads/preview/logo-facebook-instagram-email-11549824855rohhy6rugp.png" alt="Instagram Logo" width="20" height="20"></a>
+<a href="mailto:torsten.andersson.peppa.pig@gmail.com"><img src="https://pluspng.com/img-png/email-icon-png-download-icons-logos-emojis-email-icons-2400.png" alt="Mail Logo" width="30" height="20"></a>
+<br>
+<br>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Mobile -->
+
+
+<div class="mobile"> 
+
+<script>
+
+function menu() {
+document.getElementById("menuDiv").style.visibility = "visible";
+
+document.getElementById("menuDiv").style.opacity = 0.1;
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.2; }, 10);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.3; }, 20);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.3; }, 30);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.4; }, 40);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.5; }, 50);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.6; }, 60);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.7; }, 70);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.8; }, 80);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.9; }, 90);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 1.0; }, 100);
+}
+function noMenu() {
+
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.9; }, 10);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.8; }, 20);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.7; }, 30);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.6; }, 40);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.5; }, 50);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.4; }, 60);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.3; }, 70);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.2; }, 80);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.1; }, 90);
+setTimeout(function(){ document.getElementById("menuDiv").style.visibility = "hidden"; }, 100);
+}
+</script>
+
+<style>
+html, body, h4 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+}
+h1 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+font-size: 55px;
+color: #393939;
+}
+h2 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+font-size: 36px;
+color: #393939;
+}
+h3 {
+font-size: 18px;
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+color: #393939;
+}
+h5 {
+font-family: sans-serif;
+text-align: center;
+}
+h6 {
+font-family: sans-serif;
+font-size: 14px;
+text-align: center;
+}
+</style>
+
+<script>
+document.addEventListener("click", (evt) => {
+    const flyoutElement = document.getElementById("menuDiv");
+	const flyoutElement2 = document.getElementById("menuButton");
+    let targetElement = evt.target;
+
+    do {
+        if (targetElement == flyoutElement || targetElement == flyoutElement2) {
+            return;
+        }
+        targetElement = targetElement.parentNode;
+    } while (targetElement);
+
+    noMenu();
+});
+</script>
+
+<!-- Header -->
+<header id="headerDiv" class="w3-display-container w3-content w3-wide" style="min-width: 100%;">
+<div style="background-image: url(Johan%20forehead2.v1.jpg); background-attachment: scroll; background-position: 50%; background-size: cover; background-repeat: no-repeat;">
+<br>
+<h5 style="color: white; margin-top: 10px; text-align: left; letter-spacing: 1px; font-size: 200%; padding-left: 18px; font-weight: 300; font-family: Playfair Display;"><a href="johanssudd.html" style="text-decoration: none;">Johanssudd</a></h5>
+
+<img id="menuButton" src="Menu%20Icon.png" onclick="menu()" alt="Kundvagn" width="30px" height="30px" style="margin-left: 60%; margin-top: -100px; cursor: pointer;">
+
+<a href="kundvagn.html"><img src="Shopping%20Cart.png" alt="Kundvagn" width="40px" height="40px" style="margin-left: -120px; margin-top: -103px; cursor: pointer; display: inline-block;"></a>
+<p id="amountOfItemsTotal" width="40px" height="40px" style="margin-right: -120px; margin-top: -90px; color: white;"></p>
+
+<div id="menuDiv" class="w3-card-4" style="visibility: hidden; width: 75%; height: 1000px; margin-left: 60%; height: 1770px; background-color: white; position: absolute; right: 0px; top: 0px; ">
+<h5 onclick="noMenu()" style="color: grey; position: absolute; right: 20px; cursor: pointer;">X</h5>
+<br>
+<br>
+<h5><a href="johanssudd.html">Hem</a></h5>
+<hr>
+<h5><a href="om-oss.html">Om Oss</a></h5>
+<hr>
+<h5><a href="">Våra sudd</a></h5>
+<hr>
+<h5><a href="merchandise.html">Merchandise</a></h5>
+<hr>
+<h5><a href="jobb.html">Jobb</a></h5>
+<hr>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</header>
+
+<br>
+<br>
+<br>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:10000px; vertical-align: baseline;">
+
+<br>
+<br>
+<br> 
+<br>
+<br>
+<h1><b>VÅRA SUDD</b></h1>
+<h5><i>Vår eleganta kollektion av radergummin.</i></h5>
+<br>
+<br>
+<br>
+<div style="width: 100%">
+<a href="sudd-glans.html"><div class="button">
+<img src="Sudd%20Glans.JPG" alt:"Sudd Glans"><h5 style="color: #393939;">Sudd Glans<br>9,99 kr</h5>
+</div></a>
+<br>
+<br>
+<a href="sudd-johan.html"><div class="button">
+<img src="Sudd%20Johan.png" alt:"Sudd Johan"><h5 style="color: #393939;">Sudd Johan<br>14,99 kr</h5>
+</div></a>
+<br>
+<br>
+<a href="sudd-stay-safe.html"><div class="button">
+<img src="Sudd%20Stay%20Safe.JPG" alt:"Sudd Stay Safe"><h5 style="color: #393939;">Sudd Stay Safe<br>49,99 kr</h5>
+</div></a>
+<br>
+<br>
+<a href="sudd-bjorkeby.html"><div class="button">
+<img src="Sudd%20Björkeby.JPG" alt:"Sudd Björkeby"><h5 style="color: #393939;">Sudd Björkeby<br>749,99 kr</h5>
+</div></a>
+<br>
+<br>
+<a href="sudd-hood.html"><div class="button">
+<img src="Sudd%20Hood.JPG" alt:"Sudd Hood"><h5 style="color: #393939;">Sudd Hood<br>999,99 kr</h5>
+</div></a>
+<br>
+<br>
+<a href="sudd-guld.html"><div class="button">
+<img src="Sudd%20Guld.png" alt:"Sudd Guld"><h5 style="color: #393939;">Sudd Guld<br>1499,99 kr</h5>
+</div></a>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+
+<div class="w3-card-4" style="background-color:rgba(0,0,0,.15)">
+<br>
+<h6 style="font-family:Roboto,Arial,sans-serif;color:rgba(0,0,0,.8);"><i>Johanssudd - Sudda bort dina pengar!</i></h6>
+<a href="https://instagram.com"><img src="https://toppng.com/uploads/preview/logo-facebook-instagram-email-11549824855rohhy6rugp.png" alt="Instagram Logo" width="20" height="20"></a>
+<a href="mailto:torsten.andersson.peppa.pig@gmail.com"><img src="https://pluspng.com/img-png/email-icon-png-download-icons-logos-emojis-email-icons-2400.png" alt="Mail Logo" width="30" height="20"></a>
+<br>
+<br>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<title>Johanssudd</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="shortcut icon" href="johan.png">
+<body>
+
+<style>
+@media screen and (max-width: 1300px) {
+.mobile {
+display: block;
+}
+.computer {
+display: none;
+}
+}
+@media screen and (min-width: 1300px) {
+.computer {
+display: block;
+}
+.mobile {
+display: none;
+}
+}
+</style>
+
+<!-- Navbar (sit on top) -->
+<div class="computer">
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-xlarge w3-wide w3-padding w3-card ">
+    <a class="w3-bar-item w3-xlarge" style="margin-top: 10px"> Johanssudd</a>
+    <!-- Float links to the right. Hide them on small screens --> 
+    <div class="w3-right w3-small w3-hide-small" style="margin-top: 15px">
+      <a href="johanssudd.html" class="w3-bar-item w3-button">HEM</a>
+      <a href="om-oss.html" class="w3-bar-item w3-button">OM OSS</a>
+      <a href="vara-sudd.html" class="w3-bar-item w3-button">VÅRA SUDD</a>
+      <a href="merchandise.html" class="w3-bar-item w3-button">MERCHANDISE</a>
+      <a href="" class="w3-bar-item w3-button">JOBB</a>
+      <a class="w3-bar-item w3-bar-none w3-xlarge" style="margin-top: -10px">|</a> 
+      <a href="kundvagn.html" class="w3-bar-item w3-button">KUNDVAGN</a>
+	  <p id="amountOfItemsTotal" class="w3-bar-item" style="margin-left: -10px; margin-top: -10px;"></p>
+    </div>
+  </div>                       
+</div>
+
+<script>
+document.getElementById("amountOfItemsTotal").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
+</script>
+
+
+<style>
+.nummerlista {
+width: 55%;
+text-align: left;
+font-family: sans-serif;
+margin: auto;
+line-height: 1.625;
+}
+.formarea {
+padding: 10px;
+height: 40px;
+width: 50%;
+background: #fafafa;
+border-color: #ccc;
+border-width: 1px;
+border-style: solid;
+resize: none;
+overflow: hidden;
+}
+.formarea:hover {
+padding: 10px;
+height: 40px;
+width: 50%;
+cursor: text;
+background: #fafafa;
+border-color: #555;
+border-width: 1px;
+border-style: solid;
+resize: none;
+overflow: hidden;
+}
+.formtext {
+text-align: right;
+font-size: 18px;
+color: #555;
+display: inline-block;
+max-width: 45%;
+vertical-align: text-top;
+margin-top: -18px;
+}
+.bigformtext {
+text-align: right;
+font-size: 18px;
+color: #555;
+display: inline-block;
+max-width: 45%;
+vertical-align: text-top;
+margin-top: -120px;
+}
+.semiformtext {
+text-align: right;
+font-size: 18px;
+color: #555;
+vertical-align: text-top;
+}
+html, body, h4 {
+font-family: sans-serif;
+text-align: center;
+}
+h1 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+font-size: 55px;
+color: #393939;
+}
+h2 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+font-size: 36px;
+color: #393939;
+}
+h3 {
+font-size: 18px;
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+color: #393939;
+}
+h5 {
+font-family: sans-serif;
+text-align: center;
+}
+h6 {
+font-family: sans-serif;
+font-size: 14px;
+text-align: center;
+}
+</style>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:10000px" id="home">
+<br>
+<br>
+<br>
+  <img class="w3-image" src="Johan%20forehead.JPG" alt="Johan Glans" width="10000" height="0">
+  <div class="w3-display-middle w3-margin-top w3-center">
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:10000px">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="w3-center w3-small w3-hide-small">
+<h1><b>ÄR DU ARBETSLÖS?</b></h1>
+<h5>Vem försöker du lura? Såklart du är! Då har vi ett jobb som kan passa dig! Vi här på Johanssud tycker alltid om lite nya <br>
+personer i vårt företag som har en passion för sudd likt oss! Om du skulle vara intresserad att fylla i formuläret under. <br> 
+Som anställd får du 10% rabatt på köp för över 3000 kr om du skulle få ett jobb här.</h5>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1><b>Varför skulle JAG jobba för ER?</b></h1>
+<div class="nummerlista">
+<h5 style="text-align: left;">Ja, men såklart har vi våra argument för varför vi erbjuder båda roligare och bättre jobb än andra företag. 
+<br>
+<br>
+1. 
+&emsp;
+Såklart får du en alldeles egen jobb-outfit (som du SÅKLART måste betala för själv). 
+<br>
+2.
+&emsp;
+Som nämnt ovan, får du 10% rabatt på köp över 3000 kr.
+<br>
+3. 
+&emsp;
+Du får jobba hemma utan att någonsin behöva lämna ditt huss, rena drömmen!
+<br>
+4. 
+&emsp;
+Vi är inte som någon annan arbetsmiljö, vi är bättre.
+<br>
+5. 
+&emsp;
+Och sist men inte minst får du såklart dela din passion för sudd med andra suddfanatiker.</h5>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h1><b>Skaffa dig ett jobb</b></h1>
+<form style="text-align: right; width: 50%; margin-left: 15%;" name="jobbformulär" action="test.php" method="post">
+<br> 
+
+  <label class="formtext" for="name"><b>Ditt namn:</b></label>
+  &emsp;
+  <textarea class="formarea" id="name" class="formdiv" name="name"></textarea><br><br>
+  
+  <label class="formtext" for="email"><b>E-post:</b></label>
+  &emsp;
+  <textarea class="formarea" type="email" id="email" name="email"></textarea><br><br><br>
+  
+  <label class="formtext" for="vilja"><b>Jag vill bli:</b></label>
+  &emsp;
+  <input style="color: white; border-color: white; background: white; border-width: 0px; width: 50%" disabled id="hidden" class="formdiv" name="hidden">
+ 
+ <div style="text-align: left; margin-left: 50%; margin-top: -22px;">
+  <input style="margin-top: -12px; vertical-align: text-top;" onclick="annat_Annat_Selected()" type="radio" id="Animatör" name="vilja" value="Animatör"></input>
+  <label style="margin-top: -18px; vertical-align: text-top;" class="formtext" for="Animatör">Animatör</label><br>
+  <input style="margin-top: -5px; vertical-align: text-top;" onclick="annat_Annat_Selected()" type="radio" id="Dsigner" name="vilja" value="Designer"></input>
+  <label style="margin-top: -12px; vertical-align: text-top;" class="formtext" for="Designer">Desginer</label><br>
+  <input style="vertical-align: text-top;" onclick="annat_Annat_Selected()" type="radio" id="Försäljare" name="vilja" value="Försäljare"></input>
+  <label style="margin-top: -7px; vertical-align: text-top;" Class="formtext" for="Försäljare">Försäljare</label><br>
+  <input style="margin-top: 5px; vertical-align: text-top;" onclick="annat_Selected()" type="radio" id="Annat" name="vilja" value="Annat"></input>
+  <label style="margin-top: -1px; vertical-align: text-top;" class="formtext" for="Annat">Annat</label>
+  <br><br>
+  </div>
+  
+  <div id="annatDiv" style="display: none;">
+  <label class="formtext" for="annanvilja"><b>Vad vill du bli då?</b></label>
+  &emsp;
+  <textarea class="formarea" id="annanvilja" class="formdiv" name="name"></textarea><br><br>
+  </div>
+
+  <label class="bigformtext" for="anledning"><b>Varför skulle vi välja just dig?</b></label>		
+  &emsp;
+  <textarea class="formarea" style="height: 150px;" size="" type="text" id="anledning" name="anledning"></textarea><br><br>
+  
+  <label style="font-weight: 500; " class="bigformtext" for="info">Mer information om dig (tidigare jobb, egenskaper, språk etc.):</label>
+  &emsp;
+  <textarea class="formarea" style="height: 150px;" type="text" id="info" name="info"></textarea><br><br>
+  
+  <input style="background-color: rgba(0,0,0,.78); border: none; height: 50px; width: 120px; cursor: pointer; color: white;" type="submit" name="jobbformulär" value="Ansök nu"></input>
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<script>
+function annat_Selected() {
+document.getElementById("annatDiv").style.display = "block";
+}
+
+function annat_Annat_Selected() {
+document.getElementById("annatDiv").style.display = "none";
+}
+</script>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Mobile -->
+
+
+<div class="mobile"> 
+
+<script>
+
+function menu() {
+document.getElementById("menuDiv").style.visibility = "visible";
+
+document.getElementById("menuDiv").style.opacity = 0.1;
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.2; }, 10);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.3; }, 20);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.3; }, 30);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.4; }, 40);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.5; }, 50);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.6; }, 60);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.7; }, 70);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.8; }, 80);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.9; }, 90);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 1.0; }, 100);
+}
+function noMenu() {
+
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.9; }, 10);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.8; }, 20);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.7; }, 30);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.6; }, 40);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.5; }, 50);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.4; }, 60);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.3; }, 70);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.2; }, 80);
+setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.1; }, 90);
+setTimeout(function(){ document.getElementById("menuDiv").style.visibility = "hidden"; }, 100);
+}
+</script>
+
+<style>
+html, body, h4 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+}
+h1 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+font-size: 55px;
+color: #393939;
+}
+h2 {
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+font-size: 36px;
+color: #393939;
+}
+h3 {
+font-size: 18px;
+font-family: proxima-nova,Helvetica,Arial,sans-serif;
+text-align: center;
+color: #393939;
+}
+h5 {
+font-family: sans-serif;
+text-align: center;
+}
+h6 {
+font-family: sans-serif;
+font-size: 14px;
+text-align: center;
+}
+</style>
+
+<script>
+document.addEventListener("click", (evt) => {
+    const flyoutElement = document.getElementById("menuDiv");
+	const flyoutElement2 = document.getElementById("menuButton");
+    let targetElement = evt.target;
+
+    do {
+        if (targetElement == flyoutElement || targetElement == flyoutElement2) {
+            return;
+        }
+        targetElement = targetElement.parentNode;
+    } while (targetElement);
+
+    noMenu();
+});
+</script>
+
+<!-- Header -->
+<header id="headerDiv" class="w3-display-container w3-content w3-wide" style="min-width: 100%;">
+<div style="background-image: url(Johan%20forehead2.v1.jpg); background-attachment: scroll; background-position: 50%; background-size: cover; background-repeat: no-repeat;">
+<br>
+<h5 style="color: white; margin-top: 10px; text-align: left; letter-spacing: 1px; font-size: 200%; padding-left: 18px; font-weight: 300; font-family: Playfair Display;"><a href="johanssudd.html" style="text-decoration: none;">Johanssudd</a></h5>
+
+<img id="menuButton" src="Menu%20Icon.png" onclick="menu()" alt="Kundvagn" width="30px" height="30px" style="margin-left: 60%; margin-top: -100px; cursor: pointer;">
+
+<a href="kundvagn.html"><img src="Shopping%20Cart.png" alt="Kundvagn" width="40px" height="40px" style="margin-left: -120px; margin-top: -103px; cursor: pointer; display: inline-block;"></a>
+<p id="amountOfItemsTotal" width="40px" height="40px" style="margin-right: -120px; margin-top: -90px; color: white;"></p>
+
+<div id="menuDiv" class="w3-card-4" style="visibility: hidden; width: 75%; height: 1000px; margin-left: 60%; height: 1770px; background-color: white; position: absolute; right: 0px; top: 0px; ">
+<h5 onclick="noMenu()" style="color: grey; position: absolute; right: 20px; cursor: pointer;">X</h5>
+<br>
+<br>
+<h5><a href="johanssudd.html">Hem</a></h5>
+<hr>
+<h5><a href="">Om Oss</a></h5>
+<hr>
+<h5><a href="vara-sudd.html">Våra sudd</a></h5>
+<hr>
+<h5><a href="merchandise.html">Merchandise</a></h5>
+<hr>
+<h5><a href="jobb.html">Jobb</a></h5>
+<hr>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:10000px">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="w3-center w3-small" style="width: 70%; margin: auto;">
+<h1><b>ÄR DU ARBETSLÖS?</b></h1>
+<h5>Vem försöker du lura? Såklart du är! Då har vi ett jobb som kan passa dig! Vi här på Johanssud tycker alltid om lite nya personer i vårt företag som har en passion för sudd likt oss! Om du skulle vara intresserad att fylla i formuläret under. Som anställd får du 10% rabatt på köp för över 3000 kr om du skulle få ett jobb här.</h5>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1><b>Varför skulle JAG jobba för ER?</b></h1>
+<div class="nummerlista">
+<h5 style="text-align: left;">Ja, men såklart har vi våra argument för varför vi erbjuder båda roligare och bättre jobb än andra företag. 
+<br>
+<br>
+1. 
+Såklart får du en alldeles egen jobb-outfit (som du SÅKLART måste betala för själv). 
+<br>
+2.
+Som nämnt ovan, får du 10% rabatt på köp över 3000 kr.
+<br>
+3. 
+Du får jobba hemma utan att någonsin behöva lämna ditt huss, rena drömmen!
+<br>
+4. 
+Vi är inte som någon annan arbetsmiljö, vi är bättre.
+<br>
+5. 
+Och sist men inte minst får du såklart dela din passion för sudd med andra suddfanatiker.</h5>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h1><b>Skaffa dig ett jobb</b></h1>
+<form style="text-align: right; width: 50%; margin-left: 15%;" name="jobbformulär" action="test.php" method="post">
+<br> 
+
+  <label class="formtext" for="name"><b>Ditt namn:</b></label>
+  &emsp;
+  <textarea class="formarea" id="name" class="formdiv" name="name"></textarea><br><br>
+  
+  <label class="formtext" for="email"><b>E-post:</b></label>
+  &emsp;
+  <textarea class="formarea" type="email" id="email" name="email"></textarea><br><br><br>
+  
+  <label class="formtext" for="vilja"><b>Jag vill bli:</b></label>
+  &emsp;
+  <input style="color: white; border-color: white; background: white; border-width: 0px; width: 50%" disabled id="hidden" class="formdiv" name="hidden">
+ 
+ <div style="text-align: left; margin-left: 50%; margin-top: -22px;">
+  <input style="margin-top: -12px; vertical-align: text-top;" onclick="annat_Annat_Selected()" type="radio" id="Animatör" name="vilja" value="Animatör"></input>
+  <label style="margin-top: -18px; vertical-align: text-top;" class="formtext" for="Animatör">Animatör</label><br>
+  <input style="margin-top: -5px; vertical-align: text-top;" onclick="annat_Annat_Selected()" type="radio" id="Dsigner" name="vilja" value="Designer"></input>
+  <label style="margin-top: -12px; vertical-align: text-top;" class="formtext" for="Designer">Desginer</label><br>
+  <input style="vertical-align: text-top;" onclick="annat_Annat_Selected()" type="radio" id="Försäljare" name="vilja" value="Försäljare"></input>
+  <label style="margin-top: -7px; vertical-align: text-top;" Class="formtext" for="Försäljare">Försäljare</label><br>
+  <input style="margin-top: 5px; vertical-align: text-top;" onclick="annat_Selected()" type="radio" id="Annat" name="vilja" value="Annat"></input>
+  <label style="margin-top: -1px; vertical-align: text-top;" class="formtext" for="Annat">Annat</label>
+  <br><br>
+  </div>
+  
+  <div id="annatDiv" style="display: none;">
+  <label class="formtext" for="annanvilja"><b>Vad vill du bli då?</b></label>
+  &emsp;
+  <textarea class="formarea" id="annanvilja" class="formdiv" name="name"></textarea><br><br>
+  </div>
+
+  <label class="bigformtext" for="anledning"><b>Varför skulle vi välja just dig?</b></label>		
+  &emsp;
+  <textarea class="formarea" style="height: 150px;" size="" type="text" id="anledning" name="anledning"></textarea><br><br>
+  
+  <label style="font-weight: 500; " class="bigformtext" for="info">Mer information om dig (tidigare jobb, egenskaper, språk etc.):</label>
+  &emsp;
+  <textarea class="formarea" style="height: 150px;" type="text" id="info" name="info"></textarea><br><br>
+  
+  <input style="background-color: rgba(0,0,0,.78); border: none; height: 50px; width: 120px; cursor: pointer; color: white;" type="submit" name="jobbformulär" value="Ansök nu"></input>
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<script>
+function annat_Selected() {
+document.getElementById("annatDiv").style.display = "block";
+}
+
+function annat_Annat_Selected() {
+document.getElementById("annatDiv").style.display = "none";
+}
+</script>
+</div>
+
+<div class="w3-card-4" style="background-color:rgba(0,0,0,.15)">
+<br>
+<h6 style="font-family:Roboto,Arial,sans-serif;color:rgba(0,0,0,.8);"><i>Johanssudd - Sudda bort dina pengar!</i></h6>
+<a href="https://instagram.com"><img src="https://toppng.com/uploads/preview/logo-facebook-instagram-email-11549824855rohhy6rugp.png" alt="Instagram Logo" width="20" height="20"></a>
+<a href="mailto:torsten.andersson.peppa.pig@gmail.com"><img src="https://pluspng.com/img-png/email-icon-png-download-icons-logos-emojis-email-icons-2400.png" alt="Mail Logo" width="30" height="20"></a>
+<br>
+<br>
+</div>
+
+</body>
+</html>
