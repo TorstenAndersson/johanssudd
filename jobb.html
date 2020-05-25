@@ -88,6 +88,29 @@ border-style: solid;
 resize: none;
 overflow: hidden;
 }
+.formareaMobile {
+padding: 10px;
+height: 40px;
+width: 100%;
+background: #fafafa;
+border-color: #ccc;
+border-width: 1px;
+border-style: solid;
+resize: none;
+overflow: hidden;
+}
+.formareaMobile:hover {
+padding: 10px;
+height: 40px;
+width: 100%;
+cursor: text;
+background: #fafafa;
+border-color: #555;
+border-width: 1px;
+border-style: solid;
+resize: none;
+overflow: hidden;
+}
 .formtext {
 text-align: right;
 font-size: 18px;
@@ -106,11 +129,14 @@ max-width: 45%;
 vertical-align: text-top;
 margin-top: -120px;
 }
-.semiformtext {
-text-align: right;
+.bigformtextMobile {
+text-align: left;
 font-size: 18px;
 color: #555;
+display: inline-block;
+max-width: 45%;
 vertical-align: text-top;
+padding-bottom: 15px;
 }
 html, body, h4 {
 font-family: sans-serif;
@@ -384,7 +410,7 @@ document.addEventListener("click", (evt) => {
 <a href="kundvagn.html"><img src="Shopping%20Cart.png" alt="Kundvagn" width="40px" height="40px" style="margin-left: -120px; margin-top: -103px; cursor: pointer; display: inline-block;"></a>
 <p id="amountOfItemsTotal" width="40px" height="40px" style="margin-right: -120px; margin-top: -90px; color: white;"></p>
 
-<div id="menuDiv" class="w3-card-4" style="visibility: hidden; width: 75%; height: 1000px; margin-left: 60%; height: 1770px; background-color: white; position: absolute; right: 0px; top: 0px; ">
+<div id="menuDiv" class="w3-card-4" style="visibility: hidden; width: 75%; margin-left: 60%; height: 3557px; background-color: white; position: absolute; right: 0px; top: 0px; ">
 <h5 onclick="noMenu()" style="color: grey; position: absolute; right: 20px; cursor: pointer;">X</h5>
 <br>
 <br>
@@ -452,8 +478,9 @@ document.addEventListener("click", (evt) => {
 <br>
 <br>
 <h1><b>Varför skulle JAG jobba för ER?</b></h1>
-<div class="nummerlista">
-<h5 style="text-align: left;">Ja, men såklart har vi våra argument för varför vi erbjuder båda roligare och bättre jobb än andra företag. 
+<div class="nummerlistaMobile">
+<h5 style="text-align: center;">Ja, men såklart har vi våra argument för varför vi erbjuder båda roligare och bättre jobb än andra företag.</h5>
+<h5 style="text-align: left;">
 <br>
 <br>
 1. 
@@ -480,46 +507,44 @@ Och sist men inte minst får du såklart dela din passion för sudd med andra su
 <br>
 <div>
 <h1><b>Skaffa dig ett jobb</b></h1>
-<form style="text-align: right; width: 50%; margin-left: 15%;" name="jobbformulär" action="test.php" method="post">
+<form style="width: 100%; text-align: left;" name="jobbformulär" action="test.php" method="post">
 <br> 
 
-  <label class="formtext" for="name"><b>Ditt namn:</b></label>
+  <label class="formtext" for="name" ><b>Ditt namn:</b></label>
   &emsp;
-  <textarea class="formarea" id="name" class="formdiv" name="name"></textarea><br><br>
+  <textarea class="formareaMobile" id="name" class="formdiv" name="name"></textarea><br><br>
   
   <label class="formtext" for="email"><b>E-post:</b></label>
   &emsp;
-  <textarea class="formarea" type="email" id="email" name="email"></textarea><br><br><br>
+  <textarea class="formareaMobile" type="email" id="email" name="email"></textarea><br><br><br>
   
   <label class="formtext" for="vilja"><b>Jag vill bli:</b></label>
   &emsp;
-  <input style="color: white; border-color: white; background: white; border-width: 0px; width: 50%" disabled id="hidden" class="formdiv" name="hidden">
  
- <div style="text-align: left; margin-left: 50%; margin-top: -22px;">
-  <input style="margin-top: -12px; vertical-align: text-top;" onclick="annat_Annat_Selected()" type="radio" id="Animatör" name="vilja" value="Animatör"></input>
+ <div style="text-align: left; margin-top: 10px;">
+  <input style="margin-top: -12px; vertical-align: text-top;" onclick="annat_Annat_SelectedMobile()" type="radio" id="Animatör" name="vilja" value="Animatör"></input>
   <label style="margin-top: -18px; vertical-align: text-top;" class="formtext" for="Animatör">Animatör</label><br>
-  <input style="margin-top: -5px; vertical-align: text-top;" onclick="annat_Annat_Selected()" type="radio" id="Dsigner" name="vilja" value="Designer"></input>
+  <input style="margin-top: -5px; vertical-align: text-top;" onclick="annat_Annat_SelectedMobile()" type="radio" id="Dsigner" name="vilja" value="Designer"></input>
   <label style="margin-top: -12px; vertical-align: text-top;" class="formtext" for="Designer">Desginer</label><br>
-  <input style="vertical-align: text-top;" onclick="annat_Annat_Selected()" type="radio" id="Försäljare" name="vilja" value="Försäljare"></input>
+  <input style="vertical-align: text-top;" onclick="annat_Annat_SelectedMobile()" type="radio" id="Försäljare" name="vilja" value="Försäljare"></input>
   <label style="margin-top: -7px; vertical-align: text-top;" Class="formtext" for="Försäljare">Försäljare</label><br>
-  <input style="margin-top: 5px; vertical-align: text-top;" onclick="annat_Selected()" type="radio" id="Annat" name="vilja" value="Annat"></input>
+  <input style="margin-top: 5px; vertical-align: text-top;" onclick="annat_SelectedMobile()" type="radio" id="Annat" name="vilja" value="Annat"></input>
   <label style="margin-top: -1px; vertical-align: text-top;" class="formtext" for="Annat">Annat</label>
   <br><br>
-  </div>
   
-  <div id="annatDiv" style="display: none;">
+  <div id="annatDivMobile" style="display: none;">
   <label class="formtext" for="annanvilja"><b>Vad vill du bli då?</b></label>
   &emsp;
-  <textarea class="formarea" id="annanvilja" class="formdiv" name="name"></textarea><br><br>
+  <textarea class="formareaMobile" id="annanvilja" class="formdiv" name="name"></textarea><br><br>
   </div>
-
-  <label class="bigformtext" for="anledning"><b>Varför skulle vi välja just dig?</b></label>		
-  &emsp;
-  <textarea class="formarea" style="height: 150px;" size="" type="text" id="anledning" name="anledning"></textarea><br><br>
   
-  <label style="font-weight: 500; " class="bigformtext" for="info">Mer information om dig (tidigare jobb, egenskaper, språk etc.):</label>
+  <label class="bigformtextMobile" for="anledning"><b>Varför skulle vi välja just dig?</b></label>		
   &emsp;
-  <textarea class="formarea" style="height: 150px;" type="text" id="info" name="info"></textarea><br><br>
+  <textarea class="formareaMobile" style="height: 150px;" type="text" id="anledning" name="anledning"></textarea><br><br>
+  
+  <label style="font-weight: 500;" class="bigformtextMobile" for="info">Mer information om dig (tidigare jobb, egenskaper, språk etc.):</label>
+  &emsp;
+  <textarea class="formareaMobile" style="height: 150px;" type="text" id="info" name="info"></textarea><br><br>
   
   <input style="background-color: rgba(0,0,0,.78); border: none; height: 50px; width: 120px; cursor: pointer; color: white;" type="submit" name="jobbformulär" value="Ansök nu"></input>
 </form>
@@ -530,14 +555,17 @@ Och sist men inte minst får du såklart dela din passion för sudd med andra su
 <br>
 
 <script>
-function annat_Selected() {
+function annat_SelectedMobile() {
 document.getElementById("annatDiv").style.display = "block";
 }
 
-function annat_Annat_Selected() {
+function annat_Annat_SelectedMobile() {
 document.getElementById("annatDiv").style.display = "none";
 }
 </script>
+</div>
+</div>
+</div>
 </div>
 
 <div class="w3-card-4" style="background-color:rgba(0,0,0,.15)">
