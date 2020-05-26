@@ -424,7 +424,32 @@ if (typeof(Storage) !== "undefined") {
 <hr>
 <br>
 
-<button style="background-color: rgba(0,0,0,.78); margin-left: 70%; border: none; height: 65px; width: 250px; cursor: pointer; color: white; font-size: 19px">Fortsätt till kassan</button>
+<div id="inteKlart" style="width: 60%; margin: auto; display: none;">
+<h1 style="padding-top: 10px;">Chilla!</h1>
+<h3 style="padding-bottom: 20px;">Detta är inte riktigt klart än men du kan alltid swisha till oss vid 072 303 53 21!</h3>
+</div>
+
+<br>
+<br>
+
+<script>
+document.addEventListener("click", (evt) => {
+    const flyoutElement = document.getElementById("inteKlart");
+	const flyoutElement2 = document.getElementById("kassaButton");
+    let targetElement = evt.target;
+
+    do {
+        if (targetElement == flyoutElement || targetElement == flyoutElement2) {
+            return;
+        }
+        targetElement = targetElement.parentNode;
+    } while (targetElement);
+
+    document.getElementById("inteKlart").style.display = "none"; 
+});
+</script>
+
+<button id="kassaButton" onclick="tillKassan()" style="background-color: rgba(0,0,0,.78); margin-left: 70%; border: none; height: 65px; width: 250px; cursor: pointer; color: white; font-size: 19px">Fortsätt till kassan</button>
 
 <script>
 
@@ -489,48 +514,12 @@ document.getElementById("noItem").style.display = "block";
 }
 </script>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<script>
+function tillKassan() {
+document.getElementById("inteKlart").style.display = "block"; 
+}
+</script>
+
 <br>
 <br>
 <br>
@@ -662,7 +651,7 @@ document.addEventListener("click", (evt) => {
 <a href="kundvagn.html"><img src="Shopping%20Cart2.png" alt="Kundvagn" width="30px" height="30px" style="margin-left: -120px; margin-top: -100px; cursor: pointer; display: inline-block;"></a>
 <p id="amountOfItemsTotal" width="40px" height="40px" style="margin-right: -120px; margin-top: -90px; color: white;"></p>
 
-<div id="menuDiv" class="w3-card-4" style="visibility: hidden; width: 75%; margin-left: 60%; height: 1304px; background-color: white; position: absolute; right: 0px; top: 0px; ">
+<div id="menuDiv" class="w3-card-4" style="visibility: hidden; width: 75%; margin-left: 60%; background-color: white; position: absolute; right: 0px; top: 0px; ">
 <h5 onclick="noMenu()" style="color: grey; position: absolute; right: 20px; cursor: pointer;">X</h5>
 <br>
 <br>
@@ -701,6 +690,7 @@ document.addEventListener("click", (evt) => {
 <br>
 <br>
 <br>
+
 </header>
 <div style="margin-top: -600px;">
 <br>
@@ -1046,7 +1036,32 @@ if (typeof(Storage) !== "undefined") {
 <hr>
 <br>
 
-<button style="background-color: rgba(0,0,0,.78); border: none; height: 65px; width: 350px; cursor: pointer; color: white; font-size: 19px">Fortsätt till kassan</button>
+<div id="inteKlartMobile" style="width: 60%; margin: auto; display: none;">
+<h1 style="padding-top: 10px;">Chilla!</h1>
+<h3 style="padding-bottom: 20px;">Detta är inte riktigt klart än men du kan alltid swisha till oss vid 072 303 53 21!</h3>
+</div>
+
+<br>
+<br>
+
+<script>
+document.addEventListener("click", (evt) => {
+    const flyoutElement = document.getElementById("inteKlartMobile");
+	const flyoutElement2 = document.getElementById("kassaButtonMobile");
+    let targetElement = evt.target;
+
+    do {
+        if (targetElement == flyoutElement || targetElement == flyoutElement2) {
+            return;
+        }
+        targetElement = targetElement.parentNode;
+    } while (targetElement);
+
+    document.getElementById("inteKlartMobile").style.display = "none"; 
+});
+</script>
+
+<button id="kassaButtonMobile" onclick="tillKassanMobile()" style="background-color: rgba(0,0,0,.78); border: none; height: 65px; width: 350px; cursor: pointer; color: white; font-size: 19px">Fortsätt till kassan</button>
 
 <script>
 
@@ -1111,16 +1126,12 @@ document.getElementById("noItemMobile").style.display = "block";
 }
 </script>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<script>
+function tillKassanMobile() {
+document.getElementById("inteKlartMobile").style.display = "block"; 
+}
+</script>
+
 <br>
 <br>
 <br>
@@ -1133,7 +1144,7 @@ document.getElementById("noItemMobile").style.display = "block";
 </div>
 </div>
 
-<div class="w3-card-4" style="background-color:rgba(0,0,0,.15)">
+<div id="footer" class="w3-card-4" style="background-color:rgba(0,0,0,.15)">
 <br>
 <h6 style="font-family:Roboto,Arial,sans-serif;color:rgba(0,0,0,.8);"><i>Johanssudd - Sudda bort dina pengar!</i></h6>
 <a href="https://instagram.com"><img src="https://toppng.com/uploads/preview/logo-facebook-instagram-email-11549824855rohhy6rugp.png" alt="Instagram Logo" width="20" height="20"></a>
@@ -1141,6 +1152,11 @@ document.getElementById("noItemMobile").style.display = "block";
 <br>
 <br>
 </div>
+
+<script>
+var footerDiv = document.getElementById("footer");
+document.getElementById("menuDiv").style.height = footerDiv.offsetTop + 108 + "px";
+</script>
 
 </body>
 </html>
