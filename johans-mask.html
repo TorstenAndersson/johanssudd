@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="shortcut icon" href="Johan.png">
+<link rel="shortcut icon" href="johan.png">
 <body>
 
 <style>
@@ -26,6 +26,88 @@ display: none;
 }
 </style>
 
+<script>
+
+var x;
+var animationInAction;
+
+function Mask_Added() {
+
+x = sessionStorage.getItem("yMask") + 1;
+sessionStorage.setItem("yMask", x);
+
+sessionStorage.setItem("amountOfItems", sessionStorage.getItem("amountOfItems") + "1");
+document.getElementById("amountOfItemsTotal").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
+
+document.getElementById("MaskAnimation").style.opacity = 0.1;
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.2; }, 10);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.3; }, 20);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.3; }, 30);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.4; }, 40);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.5; }, 50);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.6; }, 60);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.7; }, 70);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.8; }, 80);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.9; }, 90);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 1.0; }, 100);
+
+if (animationInAction !== "1") {
+
+animationInAction = "1";
+
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.9; }, 3100);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.8; }, 3110);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.7; }, 3120);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.6; }, 3130);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.5; }, 3140);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.4; }, 3150);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.3; }, 3160);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.2; }, 3170);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.1; }, 3180);
+setTimeout(function(){ document.getElementById("MaskAnimation").style.opacity = 0.0; }, 3190);
+setTimeout(function(){ animationInAction = "0"; }, 3190);
+
+}
+
+sessionStorage.setItem("itemsMask", "Johans Mask");
+sessionStorage.setItem("imgMask", "Johans%20Mask.png");
+sessionStorage.setItem("pricesMask", "199.99 kr");
+sessionStorage.setItem("pricesForTotalMask", "199.99");
+sessionStorage.setItem("amountMask", (sessionStorage.getItem("yMask").length));
+
+if (sessionStorage.getItem("Glans") !== "block") {
+sessionStorage.setItem("Glans", "none");
+}
+if (sessionStorage.getItem("Johan") !== "block") {
+sessionStorage.setItem("Johan", "none");
+}
+if (sessionStorage.getItem("StaySafe") !== "block") {
+sessionStorage.setItem("StaySafe", "none");
+}
+if (sessionStorage.getItem("Björkeby") !== "block") {
+sessionStorage.setItem("Björkeby", "none");
+}
+if (sessionStorage.getItem("Hood") !== "block") {
+sessionStorage.setItem("Hood", "none");
+}
+if (sessionStorage.getItem("Guld") !== "block") {
+sessionStorage.setItem("Guld", "none");
+}
+if (sessionStorage.getItem("T_Shirt") !== "block") {
+sessionStorage.setItem("T_Shirt", "none");
+}
+if (sessionStorage.getItem("Hoodie") !== "block") {
+sessionStorage.setItem("Hoodie", "none");
+}
+if (sessionStorage.getItem("Kepa") !== "block") {
+sessionStorage.setItem("Kepa", "none");
+}
+
+sessionStorage.setItem("Mask", "block");
+
+}
+</script>
+
 <!-- Navbar (sit on top) -->
 <div class="computer">
 <div class="w3-top">
@@ -44,7 +126,7 @@ display: none;
     </div>
   </div> 
   </div> 
-  
+
 <script>
 document.getElementById("amountOfItemsTotal").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
 </script>
@@ -92,7 +174,7 @@ font-family: sans-serif;
 font-size: 14px;
 text-align: center;
 }
-@media screen and (min-height: 700px) {
+@media screen and (min-height: 847px) {
 .footer {
 position: absolute;
 bottom: 0px;
@@ -100,115 +182,32 @@ width: 100%;
 }
 }
 </style>
-
-<script>
-
-var x;
-var animationInAction;
-
-function sudd_Johan_Added() {
-
-x = sessionStorage.getItem("yJohan") + 1;
-sessionStorage.setItem("yJohan", x);
-
-sessionStorage.setItem("amountOfItems", sessionStorage.getItem("amountOfItems") + "1");
-document.getElementById("amountOfItemsTotal").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
-document.getElementById("amountOfItemsTotalMobile").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
-
-document.getElementById("JohanAnimation").style.opacity = 0.1;
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.2; }, 10);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.3; }, 20);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.3; }, 30);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.4; }, 40);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.5; }, 50);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.6; }, 60);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.7; }, 70);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.8; }, 80);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.9; }, 90);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 1.0; }, 100);
-
-if (animationInAction !== "1") {
-
-animationInAction = "1";
-
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.9; }, 3100);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.8; }, 3110);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.7; }, 3120);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.6; }, 3130);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.5; }, 3140);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.4; }, 3150);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.3; }, 3160);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.2; }, 3170);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.1; }, 3180);
-setTimeout(function(){ document.getElementById("JohanAnimation").style.opacity = 0.0; }, 3190);
-setTimeout(function(){ animationInAction = "0"; }, 3190);
-
-}
-
-sessionStorage.setItem("itemsJohan", "Sudd Johan");
-sessionStorage.setItem("imgJohan", "Sudd%20Johan.png");
-sessionStorage.setItem("pricesJohan", "14.99 kr");
-sessionStorage.setItem("pricesForTotalJohan", "14.99");
-sessionStorage.setItem("amountJohan", (sessionStorage.getItem("yJohan").length));
-
-if (sessionStorage.getItem("Glans") !== "block") {
-sessionStorage.setItem("Glans", "none");
-}
-
-sessionStorage.setItem("Johan", "block");
-
-if (sessionStorage.getItem("StaySafe") !== "block") {
-sessionStorage.setItem("StaySafe", "none");
-}
-if (sessionStorage.getItem("Björkeby") !== "block") {
-sessionStorage.setItem("Björkeby", "none");
-}
-if (sessionStorage.getItem("Hood") !== "block") {
-sessionStorage.setItem("Hood", "none");
-}
-if (sessionStorage.getItem("Guld") !== "block") {
-sessionStorage.setItem("Guld", "none");
-}
-if (sessionStorage.getItem("T_Shirt") !== "block") {
-sessionStorage.setItem("T_Shirt", "none");
-}
-if (sessionStorage.getItem("Hoodie") !== "block") {
-sessionStorage.setItem("Hoodie", "none");
-}
-if (sessionStorage.getItem("Kepa") !== "block") {
-sessionStorage.setItem("Kepa", "none");
-}
-if (sessionStorage.getItem("Mask") !== "block") {
-sessionStorage.setItem("Mask", "none");
-}
-}
-</script>
   
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:10000px;" id="home">
 <br>
 <br>
 <br>
-<div id="JohanAnimation" class="w3-card-4 animate1" style="width: 20%; margin-left: 79%; letter-spacing: 2px; opacity: 0.0;">
+<div id="MaskAnimation" class="w3-card-4 animate1" style="width: 20%; margin-left: 79%; letter-spacing: 2px; opacity: 0.0;">
 <hr>
 <h2>Tack!</h2>
-<h4>Sudd Johan</h4>
-<img src="Sudd%20Johan.png" width="60%" height="50%">
+<h4>Johans Mask</h4>
+<img src="Johans%20Mask.png" width="60%" height="50%">
 <h5>är nu i kundvagnen!</h5>
 <br>
 </div>
-<div style="margin-top: -225px;">
+<div style="margin-top: 75px;">
 <div style="width: 50%; margin-left: 25%; margin-top: -13%; letter-spacing: 1px;">
 <div style="padding-left: 50%;">
-<h1><b>Sudd Johan</b></h1>
-<h5>Bara gamla goda Johan.</h5>
-<h2><b>14,99 kr</b></h2>
+<h1><b>Johans Mask</b></h1>
+<h5>Passande pris för kvaliten!</h5>
+<h2><b>199,99 kr</b></h2>
 <br>
-<button onclick="sudd_Johan_Added()" class="button" style="background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
+<button onclick="Mask_Added()" class="button" style="background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
 </div>
 </div>
 <div style="width: 50%; margin-left: 25%;">
-<img style="margin-left: -55%; margin-top: -250px;" src="Sudd%20Johan.png" alt="Sudd Johan">
+<img style="margin-left: -65%; margin-top: -250px;;" src="Johans%20Mask.png" width="500px" height="300px" alt="Sudd Hood">
 <br>
 <br>
 <br>
@@ -226,6 +225,12 @@ sessionStorage.setItem("Mask", "none");
 <br>
 </div>
 </div>
+
+
+
+
+
+
 
 
 
@@ -359,7 +364,7 @@ document.getElementById("amountOfItemsTotalMobile").innerHTML = sessionStorage.g
 var x;
 var inAction = 0;
 
-function sudd_Johan_AddedMobile() {
+function sudd_Mask_AddedMobile() {
 
 document.getElementById("br").style.display = "none";
 sessionStorage.setItem("BR", "none");
@@ -374,25 +379,25 @@ setTimeout(function(){ if (inAction == 0) {document.getElementById("kundvagnButt
 
 if (inAction == 0) {document.getElementById("kundvagnButton").innerHTML = "Lägg i kundvagnen";}
 
-x = sessionStorage.getItem("yJohan") + 1;
-sessionStorage.setItem("yJohan", x);
+x = sessionStorage.getItem("yMask") + 1;
+sessionStorage.setItem("yMask", x);
 
 sessionStorage.setItem("amountOfItems", sessionStorage.getItem("amountOfItems") + "1");
 document.getElementById("amountOfItemsTotalMobile").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
 document.getElementById("amountOfItemsTotal").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
 
-sessionStorage.setItem("itemsJohan", "Sudd Johan");
-sessionStorage.setItem("imgJohan", "Sudd%20Johan.png");
-sessionStorage.setItem("pricesJohan", "14.99 kr");
-sessionStorage.setItem("pricesForTotalJohan", "14.99");
-sessionStorage.setItem("amountJohan", (sessionStorage.getItem("yJohan").length));
+sessionStorage.setItem("itemsMask", "Johans Mask");
+sessionStorage.setItem("imgMask", "Johans%20Mask.png");
+sessionStorage.setItem("pricesMask", "199.99 kr");
+sessionStorage.setItem("pricesForTotalMask", "199.99");
+sessionStorage.setItem("amountMask", (sessionStorage.getItem("yMask").length));
 
 if (sessionStorage.getItem("Glans") !== "block") {
 sessionStorage.setItem("Glans", "none");
 }
-
-sessionStorage.setItem("Johan", "block");
-
+if (sessionStorage.getItem("Johan") !== "block") {
+sessionStorage.setItem("Johan", "none");
+}
 if (sessionStorage.getItem("StaySafe") !== "block") {
 sessionStorage.setItem("StaySafe", "none");
 }
@@ -414,9 +419,9 @@ sessionStorage.setItem("Hoodie", "none");
 if (sessionStorage.getItem("Kepa") !== "block") {
 sessionStorage.setItem("Kepa", "none");
 }
-if (sessionStorage.getItem("Mask") !== "block") {
-sessionStorage.setItem("Mask", "none");
-}
+
+sessionStorage.setItem("Mask", "block");
+
 }
 </script>
   
@@ -427,12 +432,14 @@ sessionStorage.setItem("Mask", "none");
 <br>
 <br>
 <div style="width: 100%; margin: auto; letter-spacing: 1px;">
-<h1><b>Sudd Johan</b></h1>
-<img src="Sudd%20Johan.png" alt="Sudd Johan">
-<h5>Bara gamla goda Johan!</h5>
-<h2><b>14,99 kr</b></h2>
+<h1><b>Johans Mask</b></h1>
+<img src="Johans%20Mask.png" style="width: 300px;" alt="Johans Mask">
 <br>
-<button onclick="sudd_Johan_AddedMobile()" id="kundvagnButton" class="button" style="background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
+<br>
+<h5>Passande pris för kvaliten!</h5>
+<h2><b>199,99 kr</b></h2>
+<br>
+<button onclick="sudd_Mask_AddedMobile()" id="kundvagnButton" class="button" style="background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
 </div>
 </header>
 </div>
@@ -440,8 +447,6 @@ sessionStorage.setItem("Mask", "none");
 <script>
 document.getElementById("br").style.display = sessionStorage.getItem("BR"); 
 </script>
-
-
 
 </body>
 </html>
