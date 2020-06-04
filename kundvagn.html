@@ -139,6 +139,52 @@ font-family: sans-serif;
 font-size: 14px;
 text-align: center;
 }
+.formarea {
+padding: 10px;
+height: 40px;
+width: 50%;
+background: #fafafa;
+border-color: #ccc;
+border-width: 1px;
+border-style: solid;
+resize: none;
+overflow: hidden;
+}
+.formarea:hover {
+padding: 10px;
+height: 40px;
+width: 50%;
+cursor: text;
+background: #fafafa;
+border-color: #555;
+border-width: 1px;
+border-style: solid;
+resize: none;
+overflow: hidden;
+}
+.formareaMobile {
+padding: 10px;
+height: 40px;
+width: 100%;
+background: #fafafa;
+border-color: #ccc;
+border-width: 1px;
+border-style: solid;
+resize: none;
+overflow: hidden;
+}
+.formareaMobile:hover {
+padding: 10px;
+height: 40px;
+width: 100%;
+cursor: text;
+background: #fafafa;
+border-color: #555;
+border-width: 1px;
+border-style: solid;
+resize: none;
+overflow: hidden;
+}
 </style>
 
 <div class="w3-content w3-padding" style="max-width:10000px">
@@ -158,7 +204,6 @@ text-align: center;
 <br>
 <br>
 <br>
-<br>
 
 <div id="item">
 <h1>Ingenting!</h1>
@@ -167,6 +212,8 @@ text-align: center;
 </div>
 
 <div id="noItem" style="width: 60%; margin-left: 20%;">
+<br>
+
 <br>
 <h5 style="text-align: left; padding-left: 3%; color: gray">Produkt</h5>
 <h5 style="text-align: left; padding-left: 50%; margin-top: -37px; color: gray">Pris</h5>
@@ -480,7 +527,7 @@ if (typeof(Storage) !== "undefined") {
 <div class="w3-card-4" id="MaskCart">
 
 <h4 id="resultItems10" style="text-align: left; padding-left: 2%; padding-top: 5%; color: #342f2f;"></h4>
-<img id="resultImg10" width="150px" height="100px" alt="" style="margin-left: -45%; margin-top: -70px;"></img>
+<img id="resultImg10" width="150px" height="90px" alt="" style="margin-left: -45%; margin-top: -70px;"></img>
 <h4 id="resultPrices10" style="text-align: left; padding-left: 49%; margin-top: -70px; color: #342f2f;"></h4>
 <h4 id="resultAmount10" style="text-align: left; padding-left: 71.5%; margin-top: -40px; color: #342f2f;"></h4>
 <h4 id="resultTotal10" style="text-align: right; width: 97%; margin-top: -40px; color: #342f2f;"></h4>
@@ -511,7 +558,50 @@ if (typeof(Storage) !== "undefined") {
 <br>
 </div>
 
-<h2 id="totalPrice" style="text-align: left; padding-left: 65%; margin-top: 40px;"></h2>
+<div class="w3-card-4" id="HylteCart">
+
+<h4 id="resultItems11" style="text-align: left; padding-left: 2%; padding-top: 45px; color: #342f2f;"></h4>
+<img id="resultImg11" width="60px" height="100px" style="margin-left: -45%; margin-top: -70px;"></img>
+<h4 id="resultPrices11" style="text-align: left; padding-left: 49%; margin-top: -63px; color: #342f2f;"></h4>
+<h4 id="resultAmount11" style="text-align: left; padding-left: 71.5%; margin-top: -40px; color: #342f2f;"></h4>
+<h4 id="resultTotal11" style="text-align: right; width: 97%; margin-top: -40px; color: #342f2f;"></h4>
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  document.getElementById("resultItems11").innerHTML = sessionStorage.getItem("itemsHylte");
+  document.getElementById("resultImg11").src = sessionStorage.getItem("imgHylte");
+  document.getElementById("resultPrices11").innerHTML = sessionStorage.getItem("pricesHylte");
+  
+  var aHylte = sessionStorage.getItem("pricesForTotalHylte");
+  var bHylte = sessionStorage.getItem("amountHylte");
+  
+  
+  if (aHylte * bHylte !== 0) {
+  document.getElementById("resultTotal11").innerHTML = aHylte * bHylte + " kr";
+  document.getElementById("noItem").style.display = "block";
+  document.getElementById("item").style.display = "none";
+  } else {
+  document.getElementById("noItem").style.display = "none";
+  document.getElementById("item").style.display = "block";
+  }
+  document.getElementById("resultAmount11").innerHTML = sessionStorage.getItem("amountHylte");
+} else {
+}
+</script>
+<br>
+<br>
+</div>
+
+<div style="margin-top: 15px; padding-bottom: 15px; margin-left: -80%;">
+<label for="rabattKodArea" style="font-size: 20px;">Rabattkod? Skriv in här!</label>
+<br>
+<input id="rabattKodArea" class="formarea" style="width: 200px"></input>
+<br>
+<label id="användellerinte" style="font-size: 12px; visibility: hidden;">rabattkod</label>
+</div>
+
+<h5 id="totalPriceOld" style="text-align: left; padding-left: 65%; padding-bottom: 50px; margin-top: -80px; visibility: hidden; text-decoration: line-through;"></h2>
+<h2 id="totalPrice" style="text-align: left; padding-left: 65%; margin-top: -70px;"></h2>
 
 <hr>
 <br>
@@ -587,7 +677,75 @@ if (parseFloat(aMask) * parseFloat(bMask) > 0) {
 x = x + parseFloat(aMask) * parseFloat(bMask);
 }
 
+if (parseFloat(aHylte) * parseFloat(bHylte) > 0) {
+x = x + parseFloat(aHylte) * parseFloat(bHylte);
+}
+
+x = (Math.round(x * 100))/100;;
+
+if (sessionStorage.getItem("rabattUsed") == "true") {
+x = x * 0.8;
+x = (Math.round(x * 100))/100;
+y = x/0.8;
+y = (Math.round(y * 100))/100;
+document.getElementById("totalPriceOld").innerHTML = "Totalt: " + y + " kr";
+document.getElementById("totalPriceOld").style.visibility = "visible";
+}
+
 document.getElementById("totalPrice").innerHTML = "Totalt: " + x + " kr";
+
+
+
+var input = document.getElementById("rabattKodArea");
+var inAction = 0;
+var inAction2 = 0;
+
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+if (input.value == "AgHjdLLiYi" || input.value == "DlöSkdKUO" || input.value == "HgFddHKfk" || input.value == "MlBjKGTJDj" || input.value == "ÖpjHGsjLdJ" || input.value == "WhKdjKfjJfk" || input.value == "OdjHdkHfjJ" || input.value == "QejLdkIfjkDj" || input.value == "EjdJdkJfkBf" || input.value == "KJdjlBflLdvI" || input.value == "NutAkdkhlK" || input.value == "ÅpKduDhkK" || input.value == "YejBdjjJdnK" || input.value == "VNdjJjfkBfk" || input.value == "IdjJjjdjkkdjfj") {
+
+if (sessionStorage.getItem("rabattUsed") == "true") {
+document.getElementById("användellerinte").innerHTML = "Rabattkod redan använd!";
+document.getElementById("användellerinte").style.color = "black";
+document.getElementById("användellerinte").style.visibility = "visible";
+
+inAction = inAction + 1;
+setTimeout(function(){ inAction = inAction - 1; }, 5000);
+
+setTimeout(function(){ if (inAction == 0) {document.getElementById("användellerinte").style.visibility = "hidden";}}, 5000);
+
+if (inAction == 0) {document.getElementById("användellerinte").style.visibility = "hidden";}
+}
+
+if (!(sessionStorage.getItem("rabattUsed") == "true")) {
+document.getElementById("användellerinte").innerHTML = "Rabattkod applicerad";
+document.getElementById("användellerinte").style.color = "#32CD32";
+document.getElementById("användellerinte").style.visibility = "visible";
+setTimeout(function(){document.getElementById("användellerinte").style.visibility = "hidden";}, 5000);
+sessionStorage.setItem("rabattUsed", "true");
+x = x * 0.8;
+x = (Math.round(x * 100))/100;
+document.getElementById("totalPriceOld").innerHTML = document.getElementById("totalPrice").innerHTML;
+document.getElementById("totalPriceOld").style.visibility = "visible";
+document.getElementById("totalPrice").innerHTML = "Totalt: " + x + " kr";
+
+}
+}
+
+if (!(input.value == "AgHjdLLiYi" || input.value == "DlöSkdKUO" || input.value == "HgFddHKfk" || input.value == "MlBjKGTJDj" || input.value == "ÖpjHGsjLdJ" || input.value == "WhKdjKfjJfk" || input.value == "OdjHdkHfjJ" || input.value == "QejLdkIfjkDj" || input.value == "EjdJdkJfkBf" || input.value == "KJdjlBflLdvI" || input.value == "NutAkdkhlK" || input.value == "ÅpKduDhkK" || input.value == "YejBdjjJdnK" || input.value == "VNdjJjfkBfk" || input.value == "IdjJjjdjkkdjfj")) {
+document.getElementById("användellerinte").innerHTML = "Rabattkod inte valid";
+document.getElementById("användellerinte").style.color = "#FF0000";
+document.getElementById("användellerinte").style.visibility = "visible";
+
+inAction2 = inAction2 + 1;
+setTimeout(function(){ inAction2 = inAction2 - 1; }, 5000);
+
+setTimeout(function(){ if (inAction2 == 0) {document.getElementById("användellerinte").style.visibility = "hidden";}}, 5000);
+
+if (inAction2 == 0) {document.getElementById("användellerinte").style.visibility = "hidden";}
+}
+}
+});
 </script>
 
 </div>
@@ -604,8 +762,9 @@ document.getElementById("T_ShirtCart").style.display = sessionStorage.getItem("T
 document.getElementById("KepaCart").style.display = sessionStorage.getItem("Kepa");
 document.getElementById("HoodieCart").style.display = sessionStorage.getItem("Hoodie");
 document.getElementById("MaskCart").style.display = sessionStorage.getItem("Mask");
+document.getElementById("HylteCart").style.display = sessionStorage.getItem("Hylte");
 
-if (document.getElementById("GuldCart").style.display == "block" || document.getElementById("HoodCart").style.display == "block" || document.getElementById("BjörkebyCart").style.display == "block"  || document.getElementById("StaySafeCart").style.display == "block" || document.getElementById("JohanCart").style.display == "block" || document.getElementById("GlansCart").style.display == "block" || document.getElementById("T_ShirtCart").style.display == "block" || document.getElementById("KepaCart").style.display == "block" || document.getElementById("HoodieCart").style.display == "block" || document.getElementById("MaskCart").style.display == "block"){
+if (document.getElementById("GuldCart").style.display == "block" || document.getElementById("HoodCart").style.display == "block" || document.getElementById("BjörkebyCart").style.display == "block"  || document.getElementById("StaySafeCart").style.display == "block" || document.getElementById("JohanCart").style.display == "block" || document.getElementById("GlansCart").style.display == "block" || document.getElementById("T_ShirtCart").style.display == "block" || document.getElementById("KepaCart").style.display == "block" || document.getElementById("HoodieCart").style.display == "block" || document.getElementById("MaskCart").style.display == "block" || document.getElementById("HylteCart").style.display == "block"){
 document.getElementById("item").style.display = "none";
 document.getElementById("noItem").style.display = "block";
 }
@@ -748,7 +907,7 @@ document.addEventListener("click", (evt) => {
 <a href="kundvagn.html"><img src="Shopping%20Cart2.png" alt="Kundvagn" width="30px" height="30px" style="margin-left: -120px; margin-top: -100px; cursor: pointer; display: inline-block;"></a>
 <p id="amountOfItemsTotal" width="40px" height="40px" style="margin-right: -120px; margin-top: -90px; color: white;"></p>
 
-<div id="menuDiv" class="w3-card-4" style="visibility: hidden; width: 75%; margin-left: 60%; background-color: white; position: absolute; right: 0px; top: 0px; ">
+<div id="menuDiv" class="w3-card-4" style="visibility: hidden; width: 75%; margin-left: 60%; background-color: white; position: absolute; right: 0px; top: 0px;">
 <h5 onclick="noMenu()" style="color: grey; position: absolute; right: 20px; cursor: pointer;">X</h5>
 <br>
 <br>
@@ -807,6 +966,13 @@ document.addEventListener("click", (evt) => {
 <br>
 <br>
 <br>
+<div style="padding-bottom: 15px; margin-left: 60%;">
+<label for="rabattKodAreaMobile" style="font-size: 20px;">Rabattkod? Skriv in här!</label>
+<br>
+<input id="rabattKodAreaMobile" class="formareaMobile" style="width: 90%;"></input>
+<br>
+<label id="användellerinteMobile" style="font-size: 12px; visibility: hidden;">rabattkod</label>
+</div>
 
 <div id="itemMobile">
 <h1>Ingenting!</h1>
@@ -1158,13 +1324,50 @@ if (typeof(Storage) !== "undefined") {
 <br>
 <br>
 </div>
+
+<div class="w3-card-4" id="HylteCartMobile">
+
+<h4 id="resultItems11Mobile" style="text-align: left; padding-left: 2%; padding-top: 45px; color: #342f2f; font-size: 110%;"></h4>
+<img id="resultImg11Mobile" width="50px" height="90px" style="margin-left: -20%; margin-top: -70px;"></img>
+<h4 id="resultPrices11Mobile" style="text-align: left; padding-left: 49%; margin-top: -63px; color: #342f2f;"></h4>
+<h4 id="resultAmount11Mobile" style="text-align: left; padding-left: 71.5%; margin-top: -40px; color: #342f2f;"></h4>
+<h4 id="resultTotal11Mobile" style="text-align: right; width: 97%; margin-top: -40px; color: #342f2f;"></h4>
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  document.getElementById("resultItems11Mobile").innerHTML = sessionStorage.getItem("itemsHylte");
+  document.getElementById("resultImg11Mobile").src = sessionStorage.getItem("imgHylte");
+  document.getElementById("resultPrices11Mobile").innerHTML = sessionStorage.getItem("pricesHylte");
+  
+  var aHylte = sessionStorage.getItem("pricesForTotalHylte");
+  var bHylte = sessionStorage.getItem("amountHylte");
+  
+  
+  if (aHylte * bHylte !== 0) {
+  document.getElementById("resultTotal11Mobile").innerHTML = aHylte * bHylte + " kr";
+  document.getElementById("noItemMobile").style.display = "block";
+  document.getElementById("itemMobile").style.display = "none";
+  } else {
+  document.getElementById("noItemMobile").style.display = "none";
+  document.getElementById("itemMobile").style.display = "block";
+  }
+  document.getElementById("resultAmount11Mobile").innerHTML = sessionStorage.getItem("amountHylte");
+} else {
+}
+</script>
+<br>
+<br>
+</div>
+
 <br>
 <br>
 
+<h5 id="totalPriceOldMobile" style="width: 100%; margin: auto; visibility: hidden; text-decoration: line-through;"></h2>
 <h2 id="totalPriceMobile" style="width: 100%; margin: auto; overflow: visible;"></h2>
 
 <hr>
 <br>
+
 
 <div id="inteKlartMobile" style="width: 60%; margin: auto; display: none;">
 <h1 style="padding-top: 10px;">Chilla!</h1>
@@ -1237,7 +1440,75 @@ if (parseFloat(aMask) * parseFloat(bMask) > 0) {
 x = x + parseFloat(aMask) * parseFloat(bMask);
 }
 
+if (parseFloat(aHylte) * parseFloat(bHylte) > 0) {
+x = x + parseFloat(aHylte) * parseFloat(bHylte);
+}
+
+x = (Math.round(x * 100))/100;;
+
+if (sessionStorage.getItem("rabattUsed") == "true") {
+x = x * 0.8;
+x = (Math.round(x * 100))/100;
+y = x/0.8;
+y = (Math.round(y * 100))/100;
+document.getElementById("totalPriceOldMobile").innerHTML = "Totalt: " + y + " kr";
+document.getElementById("totalPriceOldMobile").style.visibility = "visible";
+}
+
 document.getElementById("totalPriceMobile").innerHTML = "Totalt: " + x + " kr";
+
+
+
+var input = document.getElementById("rabattKodAreaMobile");
+var inAction = 0;
+var inAction2 = 0;
+
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+if (input.value == "AgHjdLLiYi" || input.value == "DlöSkdKUO" || input.value == "HgFddHKfk" || input.value == "MlBjKGTJDj" || input.value == "ÖpjHGsjLdJ" || input.value == "WhKdjKfjJfk" || input.value == "OdjHdkHfjJ" || input.value == "QejLdkIfjkDj" || input.value == "EjdJdkJfkBf" || input.value == "KJdjlBflLdvI" || input.value == "NutAkdkhlK" || input.value == "ÅpKduDhkK" || input.value == "YejBdjjJdnK" || input.value == "VNdjJjfkBfk" || input.value == "IdjJjjdjkkdjfj") {
+
+if (sessionStorage.getItem("rabattUsed") == "true") {
+document.getElementById("användellerinteMobile").innerHTML = "Rabattkod redan använd!";
+document.getElementById("användellerinteMobile").style.color = "black";
+document.getElementById("användellerinteMobile").style.visibility = "visible";
+
+inAction = inAction + 1;
+setTimeout(function(){ inAction = inAction - 1; }, 5000);
+
+setTimeout(function(){ if (inAction == 0) {document.getElementById("användellerinteMobile").style.visibility = "hidden";}}, 5000);
+
+if (inAction == 0) {document.getElementById("användellerinteMobile").style.visibility = "hidden";}
+}
+
+if (!(sessionStorage.getItem("rabattUsed") == "true")) {
+document.getElementById("användellerinteMobile").innerHTML = "Rabattkod applicerad";
+document.getElementById("användellerinteMobile").style.color = "#32CD32";
+document.getElementById("användellerinteMobile").style.visibility = "visible";
+setTimeout(function(){document.getElementById("användellerinteMobile").style.visibility = "hidden";}, 5000);
+sessionStorage.setItem("rabattUsed", "true");
+x = x * 0.8;
+x = (Math.round(x * 100))/100;
+document.getElementById("totalPriceOldMobile").innerHTML = document.getElementById("totalPrice").innerHTML;
+document.getElementById("totalPriceOldMobile").style.visibility = "visible";
+document.getElementById("totalPriceMobile").innerHTML = "Totalt: " + x + " kr";
+
+}
+}
+
+if (!(input.value == "AgHjdLLiYi" || input.value == "DlöSkdKUO" || input.value == "HgFddHKfk" || input.value == "MlBjKGTJDj" || input.value == "ÖpjHGsjLdJ" || input.value == "WhKdjKfjJfk" || input.value == "OdjHdkHfjJ" || input.value == "QejLdkIfjkDj" || input.value == "EjdJdkJfkBf" || input.value == "KJdjlBflLdvI" || input.value == "NutAkdkhlK" || input.value == "ÅpKduDhkK" || input.value == "YejBdjjJdnK" || input.value == "VNdjJjfkBfk" || input.value == "IdjJjjdjkkdjfj")) {
+document.getElementById("användellerinteMobile").innerHTML = "Rabattkod inte valid";
+document.getElementById("användellerinteMobile").style.color = "#FF0000";
+document.getElementById("användellerinteMobile").style.visibility = "visible";
+
+inAction2 = inAction2 + 1;
+setTimeout(function(){ inAction2 = inAction2 - 1; }, 5000);
+
+setTimeout(function(){ if (inAction2 == 0) {document.getElementById("användellerinteMobile").style.visibility = "hidden";}}, 5000);
+
+if (inAction2 == 0) {document.getElementById("användellerinteMobile").style.visibility = "hidden";}
+}
+}
+});
 </script>
 
 </div>
@@ -1254,8 +1525,9 @@ document.getElementById("T_ShirtCartMobile").style.display = sessionStorage.getI
 document.getElementById("KepaCartMobile").style.display = sessionStorage.getItem("Kepa");
 document.getElementById("HoodieCartMobile").style.display = sessionStorage.getItem("Hoodie");
 document.getElementById("MaskCartMobile").style.display = sessionStorage.getItem("Mask");
+document.getElementById("HylteCartMobile").style.display = sessionStorage.getItem("Hylte");
 
-if (document.getElementById("GuldCartMobile").style.display == "block" || document.getElementById("HoodCartMobile").style.display == "block" || document.getElementById("BjörkebyCartMobile").style.display == "block"  || document.getElementById("StaySafeCartMobile").style.display == "block" || document.getElementById("JohanCartMobile").style.display == "block" || document.getElementById("GlansCartMobile").style.display == "block" || document.getElementById("T_ShirtCartMobile").style.display == "block" || document.getElementById("KepaCartMobile").style.display == "block" || document.getElementById("HoodieCartMobile").style.display == "block" || document.getElementById("MaskCartMobile").style.display == "block"){
+if (document.getElementById("GuldCartMobile").style.display == "block" || document.getElementById("HoodCartMobile").style.display == "block" || document.getElementById("BjörkebyCartMobile").style.display == "block"  || document.getElementById("StaySafeCartMobile").style.display == "block" || document.getElementById("JohanCartMobile").style.display == "block" || document.getElementById("GlansCartMobile").style.display == "block" || document.getElementById("T_ShirtCartMobile").style.display == "block" || document.getElementById("KepaCartMobile").style.display == "block" || document.getElementById("HoodieCartMobile").style.display == "block" || document.getElementById("MaskCartMobile").style.display == "block" || document.getElementById("HylteCartMobile").style.display == "block"){
 document.getElementById("itemMobile").style.display = "none";
 document.getElementById("noItemMobile").style.display = "block";
 }
@@ -1279,7 +1551,13 @@ document.getElementById("inteKlartMobile").style.display = "block";
 </div>
 </div>
 
-<div id="footer" class="w3-card-4" style="background-color:rgba(0,0,0,.15)">
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="footer" class="w3-card-4 footer" style="background-color:rgba(0,0,0,.15)">
 <br>
 <h6 style="font-family:Roboto,Arial,sans-serif;color:rgba(0,0,0,.8);"><i>Johanssudd - Sudda bort dina pengar!</i></h6>
 <a href="https://instagram.com"><img src="https://toppng.com/uploads/preview/logo-facebook-instagram-email-11549824855rohhy6rugp.png" alt="Instagram Logo" width="20" height="20"></a>
