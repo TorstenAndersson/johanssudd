@@ -384,7 +384,7 @@ document.addEventListener("click", (evt) => {
 </div>
 </div>
 
-<div class="w3-card-4" style="background-color:rgba(0,0,0,.15)">
+<div id="footer" class="w3-card-4 footer" style="background-color:rgba(0,0,0,.15)">
 <br>
 <h6 style="font-family:Roboto,Arial,sans-serif;color:rgba(0,0,0,.8);"><i>Johanssudd - Sudda bort dina pengar!</i></h6>
 <a href="https://instagram.com"><img src="https://toppng.com/uploads/preview/logo-facebook-instagram-email-11549824855rohhy6rugp.png" alt="Instagram Logo" width="20" height="20"></a>
@@ -392,6 +392,12 @@ document.addEventListener("click", (evt) => {
 <br>
 <br>
 </div>
+
+<script>
+var footerDiv = document.getElementById("footer");
+document.getElementById("menuDiv").style.height = footerDiv.offsetTop + 108 + "px";
+</script>
+
 
 </body>
 </html>

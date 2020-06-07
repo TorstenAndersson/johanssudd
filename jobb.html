@@ -418,7 +418,7 @@ document.addEventListener("click", (evt) => {
 <a href="kundvagn.html"><img src="Shopping%20Cart.png" alt="Kundvagn" width="40px" height="40px" style="margin-left: -120px; margin-top: -103px; cursor: pointer; display: inline-block;"></a>
 <p id="amountOfItemsTotal" width="40px" height="40px" style="margin-right: -120px; margin-top: -90px; color: white;"></p>
 
-<div id="menuDiv" class="w3-card-4" style="visibility: hidden; width: 75%; margin-left: 60%; height: 902px; background-color: white; position: absolute; right: 0px; top: 0px; z-index: 10;">
+<div id="menuDiv" class="w3-card-4" style="visibility: hidden; width: 75%; margin-left: 60%; height: 3003px; background-color: white; position: absolute; right: 0px; top: 0px; ">
 <h5 onclick="noMenu()" style="color: grey; position: absolute; right: 20px; cursor: pointer;">X</h5>
 <br>
 <br>
@@ -576,7 +576,7 @@ document.getElementById("annatDivMobile").style.display = "none";
 </div>
 </div>
 
-<div class="w3-card-4" style="background-color:rgba(0,0,0,.15)">
+<div id="footer" class="w3-card-4 footer" style="background-color:rgba(0,0,0,.15)">
 <br>
 <h6 style="font-family:Roboto,Arial,sans-serif;color:rgba(0,0,0,.8);"><i>Johanssudd - Sudda bort dina pengar!</i></h6>
 <a href="https://instagram.com"><img src="https://toppng.com/uploads/preview/logo-facebook-instagram-email-11549824855rohhy6rugp.png" alt="Instagram Logo" width="20" height="20"></a>
@@ -584,6 +584,12 @@ document.getElementById("annatDivMobile").style.display = "none";
 <br>
 <br>
 </div>
+
+<script>
+var footerDiv = document.getElementById("footer");
+document.getElementById("menuDiv").style.height = footerDiv.offsetTop + 108 + "px";
+</script>
+
 
 </body>
 </html>
