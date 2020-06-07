@@ -221,6 +221,10 @@ text-align: center;
 <script>
 
 function menu() {
+
+document.getElementById("notMenuDiv").style.visibility = "visible";
+document.getElementById("notMenuDiv").style.opacity = 1.0;
+
 document.getElementById("menuDiv").style.visibility = "visible";
 
 document.getElementById("menuDiv").style.opacity = 0.1;
@@ -236,6 +240,9 @@ setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.9; }
 setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 1.0; }, 100);
 }
 function noMenu() {
+
+setTimeout(function(){ document.getElementById("notMenuDiv").style.visibility = "hidden"; }, 300);
+document.getElementById("notMenuDiv").style.opacity = 0;
 
 setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.9; }, 10);
 setTimeout(function(){ document.getElementById("menuDiv").style.opacity = 0.8; }, 20);
@@ -302,6 +309,7 @@ document.addEventListener("click", (evt) => {
 </script>
 
 <!-- Header -->
+<div id="notMenuDiv" style="position:fixed; visibility: hidden; background:rgba(0,0,0,.5);opacity:0;left:0;right:0;top:0;bottom:0;z-index: 9; transition:opacity .3s linear"></div>
 <header id="headerDiv" class="w3-display-container w3-content w3-wide" style="min-width: 100%;">
 <div style="background-image: url(Johan%20forehead2.v1.jpg); background-attachment: scroll; background-position: 50%; background-size: cover; background-repeat: no-repeat;">
 <br>
@@ -312,7 +320,7 @@ document.addEventListener("click", (evt) => {
 <a href="kundvagn.html"><img src="Shopping%20Cart.png" alt="Kundvagn" width="40px" height="40px" style="margin-left: -120px; margin-top: -103px; cursor: pointer; display: inline-block;"></a>
 <p id="amountOfItemsTotal" width="40px" height="40px" style="margin-right: -120px; margin-top: -90px; color: white;"></p>
 
-<div id="menuDiv" class="w3-card-4" style="visibility: hidden; width: 75%; margin-left: 60%; height: 3620px; background-color: white; position: absolute; right: 0px; top: 0px; ">
+<div id="menuDiv" class="w3-card-4" style="visibility: hidden; width: 75%; margin-left: 60%; height: 902px; background-color: white; position: absolute; right: 0px; top: 0px; z-index: 10;">
 <h5 onclick="noMenu()" style="color: grey; position: absolute; right: 20px; cursor: pointer;">X</h5>
 <br>
 <br>
