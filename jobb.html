@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="htmlTag">
 <title>Johanssudd</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +28,7 @@ display: none;
 
 <!-- Navbar (sit on top) -->
 <div class="computer">
+<div id="notTackDiv" style="position:fixed; visibility: hidden; background:rgba(0,0,0,.5);opacity:0;left:0;right:0;top:0;bottom:0;z-index: 9; transition:opacity .3s linear"></div>
 <div class="w3-top">
   <div class="w3-bar w3-xlarge w3-wide w3-padding w3-card " style="color: black; background-color: rgba(240, 240, 240)">
     <a class="w3-bar-item w3-xlarge" style="margin-top: 5px; padding-bottom: 15px;"> Johanssudd</a>
@@ -243,7 +244,7 @@ Och sist men inte minst får du såklart dela din passion för sudd med andra su
 <br>
 <div>
 <h1><b>Skaffa dig ett jobb</b></h1>
-<form style="text-align: right; width: 50%; margin-left: 15%;" action="tack.html" name="jobbformulär" method="POST" data-netlify="true">
+<form style="text-align: right; width: 50%; margin-left: 15%;" action="javascript:tack()" name="jobbformulär" method="POST" data-netlify="true">
 <br> 
 
   <label class="formtext" for="namn"><b>Ditt namn:</b></label>
@@ -287,6 +288,11 @@ Och sist men inte minst får du såklart dela din passion för sudd med andra su
   <input style="background-color: rgba(0,0,0,.78); border: none; height: 50px; width: 120px; cursor: pointer; color: white;" type="submit" name="jobbformulär" value="Ansök nu"></input>
 </form>
 </div>
+<div id="tackDiv" class="w3-card-4" style="width: 60%; height: 30%; position: fixed; top: 30%; left: 20%; background-color: white; z-index: 10; visibility: hidden;">
+<br>
+<h2 id="tackHeader"><h2>
+<h5 id="tackBody"></h5>
+</div>
 <br>
 <br>
 <br>
@@ -299,6 +305,21 @@ document.getElementById("annatDiv").style.display = "block";
 
 function annat_Annat_Selected() {
 document.getElementById("annatDiv").style.display = "none";
+}
+function tack() {
+
+document.getElementById("htmlTag").style.width = "100%";
+document.getElementById("htmlTag").style.height = "100%";
+document.getElementById("htmlTag").style.overflow = "hidden";
+
+document.getElementById("notTackDiv").style.visibility = "visible";
+document.getElementById("notTackDiv").style.opacity = 1.0;
+
+document.getElementById("tackDiv").style.visibility = "visible";
+
+document.getElementById("tackHeader").innerHTML = "Tack " + document.getElementById("namn").value + "!";
+document.getElementById("tackBody").innerHTML = "Vi överväger just nu din ansökan och kommer inom kort tid skicka vårat svar till " + document.getElementById("email").value + "!";
+setTimeout(function(){ window.location.href = "index.html"; }, 5000);
 }
 </script>
 </div>
@@ -418,7 +439,7 @@ document.addEventListener("click", (evt) => {
 <a href="kundvagn.html"><img src="Shopping%20Cart.png" alt="Kundvagn" width="40px" height="40px" style="margin-left: -120px; margin-top: -103px; cursor: pointer; display: inline-block;"></a>
 <p id="amountOfItemsTotal" width="40px" height="40px" style="margin-right: -120px; margin-top: -90px; color: white;"></p>
 
-<div id="menuDiv" class="w3-card-4" style="visibility: hidden; width: 75%; margin-left: 60%; height: 3003px; background-color: white; position: absolute; right: 0px; top: 0px; ">
+<div id="menuDiv" class="w3-card-4" style="visibility: hidden; width: 75%; margin-left: 60%; height: 3003px; background-color: white; z-index: 10; position: absolute; right: 0px; top: 0px; ">
 <h5 onclick="noMenu()" style="color: grey; position: absolute; right: 20px; cursor: pointer;">X</h5>
 <br>
 <br>
@@ -515,40 +536,40 @@ Och sist men inte minst får du såklart dela din passion för sudd med andra su
 <br>
 <div>
 <h1><b>Skaffa dig ett jobb</b></h1>
-<form style="width: 100%; text-align: left;" name="jobbformulär" action="tack.html" method="POST" data-netlify="true">
+<form style="width: 100%; text-align: left;" name="jobbformulär" action="javascript:tackMobile()" method="POST" data-netlify="true">
 <br> 
 
   <label class="formtext" for="namn"><b>Ditt namn:</b></label>
   &emsp;
-  <textarea class="formareaMobile" type="namn" id="namn" name="namn"></textarea><br><br>
+  <textarea class="formareaMobile" type="namn" id="namn" name="namn" required></textarea><br><br>
   
   <label class="formtext" for="email"><b>E-post:</b></label>
   &emsp;
-  <textarea class="formareaMobile" type="email" id="email" name="email"></textarea><br><br><br>
+  <textarea class="formareaMobile" type="email" id="email" name="email" required></textarea><br><br><br>
   
   <label class="formtext" for="vilja"><b>Jag vill bli:</b></label>
   &emsp;
  
  <div style="text-align: left; margin-top: 10px;">
-  <input style="margin-top: -12px; vertical-align: text-top;" onclick="annat_Annat_SelectedMobile()" type="radio" id="Animatör" name="vilja" value="Animatör"></input>
+  <input style="margin-top: -12px; vertical-align: text-top;" onclick="annat_Annat_SelectedMobile()" type="radio" id="Animatör" name="vilja" value="Animatör" required></input>
   <label style="margin-top: -18px; vertical-align: text-top;" class="formtext" for="Animatör">Animatör</label><br>
-  <input style="margin-top: -5px; vertical-align: text-top;" onclick="annat_Annat_SelectedMobile()" type="radio" id="Dsigner" name="vilja" value="Designer"></input>
+  <input style="margin-top: -5px; vertical-align: text-top;" onclick="annat_Annat_SelectedMobile()" type="radio" id="Dsigner" name="vilja" value="Designer" required></input>
   <label style="margin-top: -12px; vertical-align: text-top;" class="formtext" for="Designer">Desginer</label><br>
-  <input style="vertical-align: text-top;" onclick="annat_Annat_SelectedMobile()" type="radio" id="Försäljare" name="vilja" value="Försäljare"></input>
+  <input style="vertical-align: text-top;" onclick="annat_Annat_SelectedMobile()" type="radio" id="Försäljare" name="vilja" value="Försäljare" required></input>
   <label style="margin-top: -7px; vertical-align: text-top;" Class="formtext" for="Försäljare">Försäljare</label><br>
-  <input style="margin-top: 5px; vertical-align: text-top;" onclick="annat_SelectedMobile()" type="radio" id="Annat" name="vilja" value="Annat"></input>
+  <input style="margin-top: 5px; vertical-align: text-top;" onclick="annat_SelectedMobile()" type="radio" id="Annat" name="vilja" value="Annat" required></input>
   <label style="margin-top: -1px; vertical-align: text-top;" class="formtext" for="Annat">Annat</label>
   <br><br>
   
   <div id="annatDivMobile" style="display: none;">
-  <label class="formtext" for="annanvilja"><b>Vad vill du bli då?</b></label>
+  <label class="formtext" for="annanVilja"><b>Vad vill du bli då?</b></label>
   &emsp;
-  <textarea class="formareaMobile" id="annanvilja" class="formdiv" name="annanVilja"></textarea><br><br>
+  <textarea class="formareaMobile" id="annanVilja" class="formdiv" name="annanVilja"></textarea><br><br>
   </div>
   
   <label class="bigformtextMobile" for="anledning"><b>Varför skulle vi välja just dig?</b></label>		
   &emsp;
-  <textarea class="formareaMobile" style="height: 150px;" type="text" id="anledning" name="anledning"></textarea><br><br>
+  <textarea class="formareaMobile" style="height: 150px;" type="text" id="anledning" name="anledning" required></textarea><br><br>
   
   <label style="font-weight: 500;" class="bigformtextMobile" for="info">Mer information om dig (tidigare jobb, egenskaper, språk etc.):</label>
   &emsp;
@@ -557,18 +578,57 @@ Och sist men inte minst får du såklart dela din passion för sudd med andra su
   <input style="background-color: rgba(0,0,0,.78); border: none; height: 50px; width: 120px; cursor: pointer; color: white;" type="submit" name="jobbformulär" value="Ansök nu"></input>
 </form>
 </div>
+<div id="tackDivMobile" class="w3-card-4" style="width: 100%; position: fixed; top: 0px; left: 0px; background-color: white; z-index: 10; visibility: hidden; opacity: 0; transition: opacity .1s linear;">
+<br>
+<h2 id="tackHeaderMobile" style="margin-top: -10px;"><h2>
+</div>
 <br>
 <br>
 <br>
 <br>
 
 <script>
+
+var annat;
+
 function annat_SelectedMobile() {
+annat = 1;
+
 document.getElementById("annatDivMobile").style.display = "block";
+document.getElementById("annanVilja").setAttribute("required", "");
 }
 
 function annat_Annat_SelectedMobile() {
+annat = 0;
+
 document.getElementById("annatDivMobile").style.display = "none";
+document.getElementById("annanVilja").removeAttribute("required");
+}
+
+function tackMobile() {
+
+if (annat == 1) {
+
+if (document.getElementById("annanVilja").value != "") {
+
+document.getElementById("tackDivMobile").style.visibility = "visible";
+document.getElementById("tackDivMobile").style.opacity = 1.0;
+
+document.getElementById("tackHeaderMobile").innerHTML = "Tack " + document.getElementById("namn").value + "!";
+
+setTimeout(function(){ document.getElementById("tackDivMobile").style.visibility = "hidden"; }, 10000);
+setTimeout(function(){ document.getElementById("tackDivMobile").style.opacity = 0; }, 2000);
+}
+} else {
+
+document.getElementById("tackDivMobile").style.visibility = "visible";
+document.getElementById("tackDivMobile").style.opacity = 1.0;
+
+document.getElementById("tackHeaderMobile").innerHTML = "Tack " + document.getElementById("namn").value + "!";
+
+setTimeout(function(){ document.getElementById("tackDivMobile").style.visibility = "hidden"; }, 10000);
+setTimeout(function(){ document.getElementById("tackDivMobile").style.opacity = 0; }, 2000);
+}
 }
 </script>
 </div>
