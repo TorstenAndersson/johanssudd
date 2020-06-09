@@ -69,8 +69,11 @@ setTimeout(function(){ animationInAction = "0"; }, 3190);
 
 }
 
+x = document.getElementById("imgSrc").src;
+document.getElementById("tackKundvagn").src = x;
+
 sessionStorage.setItem("itemsT_Shirt", "Johans T-Shirt");
-sessionStorage.setItem("imgT_Shirt", "T-Shirt%20Front.png");
+sessionStorage.setItem("imgT_Shirt", x);
 sessionStorage.setItem("pricesT_Shirt", "199.99 kr");
 sessionStorage.setItem("pricesForTotalT_Shirt", "199.99");
 sessionStorage.setItem("amountT_Shirt", (sessionStorage.getItem("yT_Shirt").length));
@@ -195,7 +198,7 @@ width: 100%;
 <hr>
 <h2>Tack!</h2>
 <h4>Johans T-Shirt</h4>
-<img src="T-Shirt%20Front.png" width="60%" height="50%">
+<img id="tackKundvagn" width="60%" height="50%">
 <h5>är nu i kundvagnen!</h5>
 <br>
 </div>
@@ -205,13 +208,34 @@ width: 100%;
 <h1><b>Johans T-Shirt</b></h1>
 <h5>Ett klädesplagg passande för vädret vi upplever just nu.</h5>
 <h2><b>199,99 kr</b></h2>
-<br>
-<select> 
+
 <button onclick="TShirt_Added()" class="button" style="margin: auto; background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
+
+<div style="margin-top: 30px;">
+<select id="selectColor" onclick="checkSelectColor()" style="margin-top: 10px; width: 80px; height: 40px; border: 1px solid #d0d0d0;"> 
+<option value="Svart">Svart</option>
+<option value="Vit">Vit</option>
+</select>
+
+<script>
+
+document.getElementById("tackKundvagn").src = "T-Shirt%20Front.png";
+
+function checkSelectColor() {
+if (document.getElementById("selectColor").value == "Vit") {
+document.getElementById("imgSrc").src = "T-Shirt%20Front%20Vit.png"
+}
+if (document.getElementById("selectColor").value == "Svart") {
+document.getElementById("imgSrc").src = "T-Shirt%20Front.png"
+}
+}
+</script>
+</div>
+
 </div>
 </div>
 <div style="width: 50%; margin-left: 25%;">
-<img style="margin-left: -65%; margin-top: -350px;" src="T-Shirt%20Front.png" alt="Johans T_Shirt">
+<img id="imgSrc" style="margin-left: -65%; margin-top: -350px; width: 387px; height: 400px;" src="T-Shirt%20Front.png" alt="Johans T_Shirt">
 <br>
 <br>
 <br>

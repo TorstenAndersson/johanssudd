@@ -69,8 +69,11 @@ setTimeout(function(){ animationInAction = "0"; }, 3190);
 
 }
 
+x = document.getElementById("imgSrc").src;
+document.getElementById("tackKundvagn").src = x;
+
 sessionStorage.setItem("itemsHoodie", "Johans Hoodie");
-sessionStorage.setItem("imgHoodie", "Hoodie%20Front.png");
+sessionStorage.setItem("imgHoodie", x);
 sessionStorage.setItem("pricesHoodie", "499.99 kr");
 sessionStorage.setItem("pricesForTotalHoodie", "499.99");
 sessionStorage.setItem("amountHoodie", (sessionStorage.getItem("yHoodie").length));
@@ -195,7 +198,7 @@ width: 100%;
 <hr>
 <h2>Tack!</h2>
 <h4>Johans Hoodie</h4>
-<img src="Hoodie%20Front.png" width="60%" height="50%">
+<img id="tackKundvagn" width="60%" height="50%">
 <h5>är nu i kundvagnen!</h5>
 <br>
 </div>
@@ -207,10 +210,40 @@ width: 100%;
 <h2><b>499,99 kr</b></h2>
 <br>
 <button onclick="Hoodie_Added()" class="button" style="margin: auto; background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
+
+<div style="margin-top: 30px;">
+<select id="selectColor" onclick="checkSelectColor()" style="margin-top: 10px; width: 80px; height: 40px; border: 1px solid #d0d0d0;"> 
+<option value="Svart">Svart</option>
+<option value="Vit">Vit</option>
+<option value="Blå">Mörkblå</option>
+<option value="Röd">Röd</option>
+</select>
+
+<script>
+
+document.getElementById("tackKundvagn").src = "Hoodie%20Front.png";
+
+function checkSelectColor() {
+if (document.getElementById("selectColor").value == "Svart") {
+document.getElementById("imgSrc").src = "Hoodie%20Front.png"
+}
+if (document.getElementById("selectColor").value == "Vit") {
+document.getElementById("imgSrc").src = "Hoodie%20Front%20Vit.png"
+}
+if (document.getElementById("selectColor").value == "Blå") {
+document.getElementById("imgSrc").src = "Hoodie%20Front%20Blå.png"
+}
+if (document.getElementById("selectColor").value == "Röd") {
+document.getElementById("imgSrc").src = "Hoodie%20Front%20Röd.png"
+}
+}
+</script>
+</div>
+
 </div>
 </div>
 <div style="width: 50%; margin-left: 25%;">
-<img style="margin-left: -65%; margin-top: -320px; width: 400px;" src="Hoodie%20Front.png" alt="Johans Hoodie">
+<img id="imgSrc" style="margin-left: -65%; margin-top: -320px; width: 400px;" src="Hoodie%20Front.png" alt="Johans Hoodie">
 <br>
 <br>
 <br>

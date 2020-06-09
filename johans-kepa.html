@@ -69,8 +69,11 @@ setTimeout(function(){ animationInAction = "0"; }, 3190);
 
 }
 
+x = document.getElementById("imgSrc").src;
+document.getElementById("tackKundvagn").src = x;
+
 sessionStorage.setItem("itemsKepa", "Johans Kepa");
-sessionStorage.setItem("imgKepa", "Keps.png");
+sessionStorage.setItem("imgKepa", x);
 sessionStorage.setItem("pricesKepa", "249.99 kr");
 sessionStorage.setItem("pricesForTotalKepa", "249.99");
 sessionStorage.setItem("amountKepa", (sessionStorage.getItem("yKepa").length));
@@ -195,7 +198,7 @@ width: 100%;
 <hr>
 <h2>Tack!</h2>
 <h4>Johans Kepa</h4>
-<img src="Keps.png" width="60%" height="50%">
+<img id="tackKundvagn" width="60%" height="50%">
 <h5>är nu i kundvagnen!</h5>
 <br>
 </div>
@@ -207,10 +210,83 @@ width: 100%;
 <h2><b>249,99 kr</b></h2>
 <br>
 <button onclick="Kepa_Added()" class="button" style="background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
+
+<div style="margin-top: 30px;">
+<select onclick="checkSelectRund()" id="selectRund" style="margin-top: 10px; width: 80px; height: 40px; border: 1px solid #d0d0d0;"> 
+<option value="Platt">Platt</option>
+<option value="Rund">Rund</option>
+</select>
+
+&emsp;
+
+<select onclick="checkSelectColor()" id="selectColor" style="margin-top: 10px; width: 80px; height: 40px; border: 1px solid #d0d0d0; display: none;"> 
+<option value="Svart">Svart</option>
+<option value="Vit">Vit</option>
+</select>
+
+
+<script>
+
+document.getElementById("tackKundvagn").src = "Keps.png";	
+
+function checkSelectColor() {
+
+if (document.getElementById("selectColor").value == "Vit") {
+
+document.getElementById("imgSrc").src = "KepaVit.png";
+document.getElementById("imgSrc").style.height = "365.28px";
+document.getElementById("imgSrc").style.width = "400px";
+}
+
+if (document.getElementById("selectColor").value == "Svart") {
+
+document.getElementById("imgSrc").src = "KepaRund.png";
+document.getElementById("imgSrc").style.height = "350.7px";
+document.getElementById("imgSrc").style.width = "420px";
+
+}
+}
+
+function checkSelectRund() {
+
+if (document.getElementById("selectRund").value == "Rund") {
+
+if (document.getElementById("selectColor").value == "Svart") {
+
+document.getElementById("selectColor").style.display = "inline-block";
+document.getElementById("imgSrc").src = "KepaRund.png";
+document.getElementById("imgSrc").style.height = "350.7px";
+document.getElementById("imgSrc").style.width = "420px";
+}
+if (document.getElementById("selectColor").value == "Vit") {
+
+document.getElementById("selectColor").style.display = "inline-block";
+document.getElementById("imgSrc").src = "KepaVit.png";
+document.getElementById("imgSrc").style.height = "365.28px";
+document.getElementById("imgSrc").style.width = "400px";
+}
+}
+
+
+if (document.getElementById("selectRund").value == "Platt") {
+
+document.getElementById("selectColor").style.display = "none";
+document.getElementById("selectColor").value = "Svart"
+document.getElementById("imgSrc").src = "Keps.png";
+document.getElementById("imgSrc").style.height = "300px";
+document.getElementById("imgSrc").style.width = "400px";
+
+
+}
+}
+</script>
+
+</div>
+
 </div>
 </div>
 <div style="width: 50%; margin-left: 25%;">
-<img style="margin-left: -65%; margin-top: -300px;;" src="Keps.png" width="400px" height="300px" alt="Sudd Hood">
+<img id="imgSrc" style="margin-left: -65%; margin-top: -300px; width: 400px; height: 300px;" src="Keps.png" alt="Johans Kepa">
 <br>
 <br>
 <br>
