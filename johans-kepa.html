@@ -546,6 +546,8 @@ sessionStorage.setItem("Mask", "none");
 
 <script>
 
+var x;
+
 document.addEventListener("click", (evt) => {
     const flyoutElement = document.getElementById("selectMenu");
     let targetElement = evt.target;
@@ -557,11 +559,12 @@ document.addEventListener("click", (evt) => {
         targetElement = targetElement.parentNode;
     } while (targetElement);
 
-    checkSelectColorMobile();
-	checkSelectRundMobile();
+    x = 0;
 });
 
 function checkSelectColorMobile() {
+
+x = 1
 
 if (document.getElementById("selectColorMobile").value == "Vit") {
 
@@ -577,9 +580,17 @@ document.getElementById("imgSrcMobile").style.width = "370px";
 document.getElementById("imgSrcMobile").style.height = "308px";
 
 }
+
+if (x = 1) {
+
+setTimeout(function(){ checkSelectColorMobile() }, 5);
+
+}
 }
 
 function checkSelectRundMobile() {
+
+x = 1;
 
 if (document.getElementById("selectRundMobile").value == "Rund") {
 
@@ -610,6 +621,13 @@ document.getElementById("imgSrcMobile").style.height = "257px";
 
 
 }
+
+if (x = 1) {
+
+setTimeout(function(){ checkSelectRundMobile() }, 5);
+
+}
+
 }
 </script>
 
