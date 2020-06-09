@@ -523,14 +523,14 @@ sessionStorage.setItem("Mask", "none");
 <br>
 <div style="width: 100%; margin: auto; letter-spacing: 1px;">
 <h1><b>Johans Kepa</b></h1>
-<img id="imgSrcMobile" src="Keps.png" style="width: 80%;" alt="Johans Kepa">
+<img id="imgSrcMobile" src="Keps.png" style="width: 350px;" alt="Johans Kepa">
 <br>
 <br>
 <h5>Passande pris för kvaliten!</h5>
 <h2><b>249,99 kr</b></h2>
 <br>
 
-<div style="margin-top: -10px; padding-bottom: 30px;">
+<div id="selectMenu" style="margin-top: -10px; padding-bottom: 30px;">
 <select onclick="checkSelectRundMobile()" id="selectRundMobile" style="margin-top: 10px; width: 80px; height: 40px; border: 1px solid #d0d0d0;"> 
 <option value="Platt">Platt</option>
 <option value="Rund">Rund</option>
@@ -546,19 +546,34 @@ sessionStorage.setItem("Mask", "none");
 
 <script>
 
+document.addEventListener("click", (evt) => {
+    const flyoutElement = document.getElementById("selectMenu");
+    let targetElement = evt.target;
+
+    do {
+        if (targetElement == flyoutElement) {
+            return;
+        }
+        targetElement = targetElement.parentNode;
+    } while (targetElement);
+
+    checkSelectColorMobile();
+});
+
 function checkSelectColorMobile() {
 
 if (document.getElementById("selectColorMobile").value == "Vit") {
 
 document.getElementById("imgSrcMobile").src = "KepaVit.png";
-document.getElementById("imgSrcMobile").style.width = "400px";
+document.getElementById("imgSrcMobile").style.width = "350px";
+document.getElementById("imgSrcMobile").style.height = "320px";
 }
 
 if (document.getElementById("selectColorMobile").value == "Svart") {
 
 document.getElementById("imgSrcMobile").src = "KepaRund.png";
-document.getElementById("imgSrcMobile").style.width = "430px";
-document.getElementById("imgSrcMobile").style.height = "365px";
+document.getElementById("imgSrcMobile").style.width = "370px";
+document.getElementById("imgSrcMobile").style.height = "308px";
 
 }
 }
@@ -571,15 +586,15 @@ if (document.getElementById("selectColorMobile").value == "Svart") {
 
 document.getElementById("selectColorMobile").style.display = "inline-block";
 document.getElementById("imgSrcMobile").src = "KepaRund.png";
-document.getElementById("imgSrcMobile").style.width = "430px";
-document.getElementById("imgSrcMobile").style.height = "365px";
+document.getElementById("imgSrcMobile").style.width = "370px";
+document.getElementById("imgSrcMobile").style.height = "308px";
 }
 if (document.getElementById("selectColorMobile").value == "Vit") {
 
 document.getElementById("selectColorMobile").style.display = "inline-block";
 document.getElementById("imgSrcMobile").src = "KepaVit.png";
-document.getElementById("imgSrcMobile").style.height = "365px";
-document.getElementById("imgSrcMobile").style.width = "400px";
+document.getElementById("imgSrcMobile").style.width = "350px";
+document.getElementById("imgSrcMobile").style.height = "320px";
 }
 }
 
@@ -589,7 +604,8 @@ if (document.getElementById("selectRundMobile").value == "Platt") {
 document.getElementById("selectColorMobile").style.display = "none";
 document.getElementById("selectColorMobile").value = "Svart"
 document.getElementById("imgSrcMobile").src = "Keps.png";
-document.getElementById("imgSrcMobile").style.width = "400px";
+document.getElementById("imgSrcMobile").style.width = "350px";
+document.getElementById("imgSrcMobile").style.height = "257px";
 
 
 }
