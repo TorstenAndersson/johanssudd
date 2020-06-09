@@ -209,6 +209,7 @@ width: 100%;
 <h5>Kvalitet on fleek.</h5>
 <h2><b>499,99 kr</b></h2>
 <br>
+
 <button onclick="Hoodie_Added()" class="button" style="margin: auto; background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
 
 <div style="margin-top: 30px;">
@@ -229,6 +230,7 @@ document.getElementById("imgSrc").src = "Hoodie%20Front.png"
 }
 if (document.getElementById("selectColor").value == "Vit") {
 document.getElementById("imgSrc").src = "Hoodie%20Front%20Vit.png"
+document.getElementById("imgSrc").onmouseover = "Hoodie%20Front%20Blå.png"
 }
 if (document.getElementById("selectColor").value == "Blå") {
 document.getElementById("imgSrc").src = "Hoodie%20Front%20Blå.png"
@@ -237,6 +239,42 @@ if (document.getElementById("selectColor").value == "Röd") {
 document.getElementById("imgSrc").src = "Hoodie%20Front%20Röd.png"
 }
 }
+</script>
+<script>
+document.addEventListener("mouseover", (evt) => {
+    
+	if (evt.target == document.getElementById("imgSrc")) {
+	
+	if (document.getElementById("selectColor").value == "Svart") {
+	document.getElementById("imgSrc").src = "Hoodie%20Back.png";
+	}
+	if (document.getElementById("selectColor").value == "Vit") {
+	document.getElementById("imgSrc").src = "Hoodie%20Back%20Vit.png";
+	}
+	if (document.getElementById("selectColor").value == "Blå") {
+	document.getElementById("imgSrc").src = "Hoodie%20Back%20Blå.png";
+	}
+	if (document.getElementById("selectColor").value == "Röd") {
+	document.getElementById("imgSrc").src = "Hoodie%20Back%20Röd.png";
+	}
+	
+	} else {
+
+	
+	if (document.getElementById("selectColor").value == "Svart") {
+	document.getElementById("imgSrc").src = "Hoodie%20Front.png";
+	}
+	if (document.getElementById("selectColor").value == "Vit") {
+	document.getElementById("imgSrc").src = "Hoodie%20Front%20Vit.png";
+	}
+	if (document.getElementById("selectColor").value == "Blå") {
+	document.getElementById("imgSrc").src = "Hoodie%20Front%20Blå.png";
+	}
+	if (document.getElementById("selectColor").value == "Röd") {
+	document.getElementById("imgSrc").src = "Hoodie%20Front%20Röd.png";
+	}
+	}
+});
 </script>
 </div>
 
@@ -255,7 +293,7 @@ document.getElementById("imgSrc").src = "Hoodie%20Front%20Röd.png"
 <div class="w3-card-4 footer" style="background-color:rgba(0,0,0,.15);">
 <br>
 <h6 style="font-family:Roboto,Arial,sans-serif;color:rgba(0,0,0,.8);"><i>Johanssudd - Sudda bort dina pengar!</i></h6>
-<a href="https://instagram.com"><img src="https://toppng.com/uploads/preview/logo-facebook-instagram-email-11549824855rohhy6rugp.png" alt="Instagram Logo" width="20" height="20"></a>
+<a href="https://instagram.com/johanssudd"><img src="https://toppng.com/uploads/preview/logo-facebook-instagram-email-11549824855rohhy6rugp.png" alt="Instagram Logo" width="20" height="20"></a>
 <a href="mailto:torsten.andersson.peppa.pig@gmail.com"><img src="https://pluspng.com/img-png/email-icon-png-download-icons-logos-emojis-email-icons-2400.png" alt="Mail Logo" width="30" height="20"></a>
 <br>
 <br>
@@ -405,7 +443,7 @@ document.getElementById("amountOfItemsTotalMobile").innerHTML = sessionStorage.g
 var x;
 var inAction = 0;
 
-function sudd_Hoodie_AddedMobile() {
+function Hoodie_AddedMobile() {
 
 document.getElementById("br").style.display = "none";
 sessionStorage.setItem("BR", "none");
@@ -475,8 +513,8 @@ sessionStorage.setItem("Mask", "none");
 <br>
 <br>
 <div style="width: 100%; margin: auto; letter-spacing: 1px;">
-<h1><b>Sudd Hoodie</b></h1>
-<img id="imgSrcMobile" src="Hoodie%20Front.png" style="width: 80%;" alt="Sudd Hoodie">
+<h1><b>Johans Hoodie</b></h1>
+<img id="imgSrcMobile" src="Hoodie%20Front.png" style="width: 80%;" alt="Johans Hoodie">
 <h5>Kvalitet on fleek.</h5>
 <h2><b>499,99 kr</b></h2>
 <br>
@@ -533,7 +571,7 @@ setTimeout(function(){ checkSelectColorMobile() }, 5);
 </script>
 </div>
 
-<button onclick="sudd_Hoodie_AddedMobile()" id="kundvagnButton" class="button" style="background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
+<button onclick="Hoodie_AddedMobile()" id="kundvagnButton" class="button" style="background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
 </div>
 </header>
 </div>
