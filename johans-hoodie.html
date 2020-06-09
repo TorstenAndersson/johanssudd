@@ -514,7 +514,7 @@ sessionStorage.setItem("Mask", "none");
 <br>
 <div style="width: 100%; margin: auto; letter-spacing: 1px;">
 <h1><b>Johans Hoodie</b></h1>
-<img id="imgSrcMobile" src="Hoodie%20Front.png" style="width: 80%;" alt="Johans Hoodie">
+<img id="imgSrcMobile" onclick="showBack()" src="Hoodie%20Front.png" style="width: 380px;" alt="Johans Hoodie">
 <h5>Kvalitet on fleek.</h5>
 <h2><b>499,99 kr</b></h2>
 <br>
@@ -528,6 +528,50 @@ sessionStorage.setItem("Mask", "none");
 </select>
 
 <script>
+
+var y = 0;
+
+function showBack() {
+
+if (y == 0) {
+
+if (document.getElementById("selectColorMobile").value == "Svart") {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Back.png";
+y = 1;
+}
+if (document.getElementById("selectColorMobile").value == "Vit") {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Back%20Vit.png";
+y = 1;
+}
+if (document.getElementById("selectColorMobile").value == "Blå") {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Back%20Blå.png";
+y = 1;
+}
+if (document.getElementById("selectColorMobile").value == "Röd") {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Back%20Röd.png";
+y = 1;
+}
+} else {
+
+if (document.getElementById("selectColorMobile").value == "Svart") {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Front.png";
+y = 0;
+}
+if (document.getElementById("selectColorMobile").value == "Vit") {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Front%20Vit.png";
+y = 0;
+}
+if (document.getElementById("selectColorMobile").value == "Blå") {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Front%20Blå.png";
+y = 0;
+}
+if (document.getElementById("selectColorMobile").value == "Röd") {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Front%20Röd.png";
+y = 0;
+}
+}
+
+}
 
 var x;
 
@@ -548,18 +592,23 @@ document.addEventListener("click", (evt) => {
 function checkSelectColorMobile() {
 
 x = 1;
+y = 0;
 
 if (document.getElementById("selectColorMobile").value == "Svart") {
 document.getElementById("imgSrcMobile").src = "Hoodie%20Front.png"
+x = 0;
 }
 if (document.getElementById("selectColorMobile").value == "Vit") {
 document.getElementById("imgSrcMobile").src = "Hoodie%20Front%20Vit.png"
+x = 0;
 }
 if (document.getElementById("selectColorMobile").value == "Blå") {
 document.getElementById("imgSrcMobile").src = "Hoodie%20Front%20Blå.png"
+x = 0;
 }
 if (document.getElementById("selectColorMobile").value == "Röd") {
 document.getElementById("imgSrcMobile").src = "Hoodie%20Front%20Röd.png"
+x = 0;
 }
 
 if (x == 1) {
