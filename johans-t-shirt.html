@@ -482,7 +482,7 @@ sessionStorage.setItem("Hylte", "none");
 <h2><b>199,99 kr</b></h2>
 <br>
 
-<div style="margin-top: -20px; padding-bottom: 30px;">
+<div id="selectMenuMobile" style="margin-top: -20px; padding-bottom: 30px;">
 <select id="selectColorMobile" onclick="checkSelectColorMobile()" style="margin-top: 10px; width: 80px; height: 40px; border: 1px solid #d0d0d0;"> 
 <option value="Svart">Svart</option>
 <option value="Vit">Vit</option>
@@ -493,7 +493,7 @@ sessionStorage.setItem("Hylte", "none");
 var x;
 
 document.addEventListener("click", (evt) => {
-    const flyoutElement = document.getElementById("selectMenu");
+    const flyoutElement = document.getElementById("selectMenuMobile");
     let targetElement = evt.target;
 
     do {
