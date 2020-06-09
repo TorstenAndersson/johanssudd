@@ -574,8 +574,6 @@ y = 0;
 
 }
 
-var x;
-
 document.addEventListener("click", (evt) => {
     const flyoutElement = document.getElementById("selectMenuMobile");
     let targetElement = evt.target;
@@ -610,7 +608,7 @@ document.getElementById("imgSrcMobile").src = "Hoodie%20Front%20Röd.png"
 
 if (x == 1) {
 
-setTimeout(checkSelectColorMobile(), 5);
+setTimeout(function(){ checkSelectColorMobile() }, 5);
 
 }
 }
