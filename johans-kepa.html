@@ -547,6 +547,7 @@ sessionStorage.setItem("Mask", "none");
 <script>
 
 var x;
+var y;
 
 document.addEventListener("click", (evt) => {
     const flyoutElement = document.getElementById("selectMenu");
@@ -581,10 +582,12 @@ document.getElementById("imgSrcMobile").style.height = "308px";
 
 }
 
-if (x = 1) {
+if (x == 1) {
+if (y == 1) {
 
 setTimeout(function(){ checkSelectColorMobile() }, 5);
 
+}
 }
 }
 
@@ -597,6 +600,7 @@ if (document.getElementById("selectRundMobile").value == "Rund") {
 if (document.getElementById("selectColorMobile").value == "Svart") {
 
 document.getElementById("selectColorMobile").style.display = "inline-block";
+y = 1
 document.getElementById("imgSrcMobile").src = "KepaRund.png";
 document.getElementById("imgSrcMobile").style.width = "370px";
 document.getElementById("imgSrcMobile").style.height = "308px";
@@ -604,6 +608,7 @@ document.getElementById("imgSrcMobile").style.height = "308px";
 if (document.getElementById("selectColorMobile").value == "Vit") {
 
 document.getElementById("selectColorMobile").style.display = "inline-block";
+y = 1
 document.getElementById("imgSrcMobile").src = "KepaVit.png";
 document.getElementById("imgSrcMobile").style.width = "350px";
 document.getElementById("imgSrcMobile").style.height = "320px";
@@ -614,7 +619,8 @@ document.getElementById("imgSrcMobile").style.height = "320px";
 if (document.getElementById("selectRundMobile").value == "Platt") {
 
 document.getElementById("selectColorMobile").style.display = "none";
-document.getElementById("selectColorMobile").value = "null"
+y = 0;
+document.getElementById("selectColorMobile").value = "Svart"
 document.getElementById("imgSrcMobile").src = "Keps.png";
 document.getElementById("imgSrcMobile").style.width = "350px";
 document.getElementById("imgSrcMobile").style.height = "257px";
