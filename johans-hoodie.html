@@ -216,7 +216,7 @@ width: 100%;
 <option value="Svart">Svart</option>
 <option value="Vit">Vit</option>
 <option value="Blå">Mörkblå</option>
-<option value="Röd">Röd</option>
+<option value="Röd">Vinröd</option>
 </select>
 
 <script>
@@ -427,8 +427,10 @@ sessionStorage.setItem("amountOfItems", sessionStorage.getItem("amountOfItems") 
 document.getElementById("amountOfItemsTotalMobile").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
 document.getElementById("amountOfItemsTotal").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
 
+x = document.getElementById("imgSrc").src;
+
 sessionStorage.setItem("itemsHoodie", "Johans Hoodie");
-sessionStorage.setItem("imgHoodie", "Hoodie%20Front.png");
+sessionStorage.setItem("imgHoodie", x);
 sessionStorage.setItem("pricesHoodie", "499.99 kr");
 sessionStorage.setItem("pricesForTotalHoodie", "499.99");
 sessionStorage.setItem("amountHoodie", (sessionStorage.getItem("yHoodie").length));
@@ -474,10 +476,38 @@ sessionStorage.setItem("Mask", "none");
 <br>
 <div style="width: 100%; margin: auto; letter-spacing: 1px;">
 <h1><b>Sudd Hoodie</b></h1>
-<img src="Hoodie%20Front.png" alt="Sudd Hoodie">
+<img id="imgSrcMobile" src="Hoodie%20Front.png" alt="Sudd Hoodie">
 <h5>Kvalitet on fleek.</h5>
 <h2><b>499,99 kr</b></h2>
 <br>
+
+<div style="margin-top: -10px; padding-bottom: 30px;">
+<select id="selectColorMobile" onclick="checkSelectColorMobile()" style="margin-top: 10px; width: 80px; height: 40px; border: 1px solid #d0d0d0;"> 
+<option value="Svart">Svart</option>
+<option value="Vit">Vit</option>
+<option value="Blå">Mörkblå</option>
+<option value="Röd">Vinröd</option>
+</select>
+
+<script>
+
+function checkSelectColorMobile() {
+if (document.getElementById("selectColorMobile").value == "Svart") {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Front.png"
+}
+if (document.getElementById("selectColorMobile").value == "Vit") {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Front%20Vit.png"
+}
+if (document.getElementById("selectColorMobile").value == "Blå") {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Front%20Blå.png"
+}
+if (document.getElementById("selectColorMobile").value == "Röd") {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Front%20Röd.png"
+}
+}
+</script>
+</div>
+
 <button onclick="sudd_Hoodie_AddedMobile()" id="kundvagnButton" class="button" style="background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
 </div>
 </header>

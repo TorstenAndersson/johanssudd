@@ -473,8 +473,10 @@ sessionStorage.setItem("amountOfItems", sessionStorage.getItem("amountOfItems") 
 document.getElementById("amountOfItemsTotalMobile").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
 document.getElementById("amountOfItemsTotal").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
 
+x = document.getElementById("imgSrc").src;
+
 sessionStorage.setItem("itemsKepa", "Johans Kepa");
-sessionStorage.setItem("imgKepa", "Keps.png");
+sessionStorage.setItem("imgKepa", x);
 sessionStorage.setItem("pricesKepa", "249.99 kr");
 sessionStorage.setItem("pricesForTotalKepa", "249.99");
 sessionStorage.setItem("amountKepa", (sessionStorage.getItem("yKepa").length));
@@ -521,12 +523,81 @@ sessionStorage.setItem("Mask", "none");
 <br>
 <div style="width: 100%; margin: auto; letter-spacing: 1px;">
 <h1><b>Johans Kepa</b></h1>
-<img src="Keps.png" style="width: 300px;" alt="Johans Kepa">
+<img id="imgSrcMobile" src="Keps.png" style="width: 400px;" alt="Johans Kepa">
 <br>
 <br>
 <h5>Passande pris för kvaliten!</h5>
 <h2><b>249,99 kr</b></h2>
 <br>
+
+<div style="margin-top: -10px; padding-bottom: 30px;">
+<select onclick="checkSelectRundMobile()" id="selectRundMobile" style="margin-top: 10px; width: 80px; height: 40px; border: 1px solid #d0d0d0;"> 
+<option value="Platt">Platt</option>
+<option value="Rund">Rund</option>
+</select>
+
+&emsp;
+
+<select onclick="checkSelectColorMobile()" id="selectColorMobile" style="margin-top: 10px; width: 80px; height: 40px; border: 1px solid #d0d0d0; display: none;"> 
+<option value="Svart">Svart</option>
+<option value="Vit">Vit</option>
+</select>
+
+
+<script>
+
+function checkSelectColorMobile() {
+
+if (document.getElementById("selectColorMobile").value == "Vit") {
+
+document.getElementById("imgSrcMobile").src = "KepaVit.png";
+document.getElementById("imgSrcMobile").style.width = "400px";
+}
+
+if (document.getElementById("selectColorMobile").value == "Svart") {
+
+document.getElementById("imgSrcMobile").src = "KepaRund.png";
+document.getElementById("imgSrcMobile").style.width = "430px";
+document.getElementById("imgSrcMobile").style.height = "365px";
+
+}
+}
+
+function checkSelectRundMobile() {
+
+if (document.getElementById("selectRundMobile").value == "Rund") {
+
+if (document.getElementById("selectColorMobile").value == "Svart") {
+
+document.getElementById("selectColorMobile").style.display = "inline-block";
+document.getElementById("imgSrcMobile").src = "KepaRund.png";
+document.getElementById("imgSrcMobile").style.width = "430px";
+document.getElementById("imgSrcMobile").style.height = "365px";
+}
+if (document.getElementById("selectColorMobile").value == "Vit") {
+
+document.getElementById("selectColorMobile").style.display = "inline-block";
+document.getElementById("imgSrcMobile").src = "KepaVit.png";
+document.getElementById("imgSrcMobile").style.height = "365px";
+document.getElementById("imgSrcMobile").style.width = "400px";
+}
+}
+
+
+if (document.getElementById("selectRundMobile").value == "Platt") {
+
+document.getElementById("selectColorMobile").style.display = "none";
+document.getElementById("selectColorMobile").value = "Svart"
+document.getElementById("imgSrcMobile").src = "Keps.png";
+document.getElementById("imgSrcMobile").style.width = "400px";
+
+
+}
+}
+</script>
+
+</div>
+
 <button onclick="sudd_Kepa_AddedMobile()" id="kundvagnButton" class="button" style="background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
 </div>
 </header>
