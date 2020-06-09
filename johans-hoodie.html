@@ -552,6 +552,7 @@ if (document.getElementById("selectColorMobile").value == "Röd") {
 document.getElementById("imgSrcMobile").src = "Hoodie%20Back%20Röd.png";
 y = 1;
 }
+
 } else {
 
 if (document.getElementById("selectColorMobile").value == "Svart") {
@@ -591,24 +592,39 @@ document.addEventListener("click", (evt) => {
 function checkSelectColorMobile() {
 
 x = 1;
-y = 0;
 
 if (document.getElementById("selectColorMobile").value == "Svart") {
+if (y == 0) {
 document.getElementById("imgSrcMobile").src = "Hoodie%20Front.png"
+} else {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Back.png";
+}
 }
 if (document.getElementById("selectColorMobile").value == "Vit") {
+if (y == 0) {
 document.getElementById("imgSrcMobile").src = "Hoodie%20Front%20Vit.png"
+} else {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Back%20Vit.png";
+}
 }
 if (document.getElementById("selectColorMobile").value == "Blå") {
+if (y == 0) {
 document.getElementById("imgSrcMobile").src = "Hoodie%20Front%20Blå.png"
+} else {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Back%20Blå.png";
+}
 }
 if (document.getElementById("selectColorMobile").value == "Röd") {
+if (y == 0) {
 document.getElementById("imgSrcMobile").src = "Hoodie%20Front%20Röd.png"
+} else {
+document.getElementById("imgSrcMobile").src = "Hoodie%20Back%20Röd.png";
+}
 }
 
 if (x == 1) {
 
-setTimeout(function(){ checkSelectColorMobile() }, 5);
+setTimeout(function(){ checkSelectColorMobile() }, 5);							
 
 }
 }
