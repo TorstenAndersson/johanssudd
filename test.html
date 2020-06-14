@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+<h1 style="width: 100; text-align: center;">Test Game</h2>
+
+<img id="character" src="johan.png" style="width: 300px; position: absolute;">
+
+<script>
+
+var x = 1;
+
+document.addEventListener("keydown", function(event) {
+  if (event.keyCode === 39) {
+    document.getElementById("character").style.left = document.getElementById("character").style.left + x + "px";
+	x++;
+  }
+});
+</script>
+
+
+</body>
+</html>
