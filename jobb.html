@@ -536,7 +536,7 @@ Och sist men inte minst får du såklart dela din passion för sudd med andra su
 <br>
 <div>
 <h1><b>Skaffa dig ett jobb</b></h1>
-<form style="width: 100%; text-align: left;" name="jobbformulär" method="POST" data-netlify="true">
+<form style="width: 100%; text-align: left;" onsubmit="tack()" action="tack.html" name="jobbformulär" method="POST" data-netlify="true">
 <br> 
 
   <label class="formtext" for="namn"><b>Ditt namn:</b></label>
@@ -603,32 +603,6 @@ annat = 0;
 
 document.getElementById("annatDivMobile").style.display = "none";
 document.getElementById("annanVilja").removeAttribute("required");
-}
-
-function tackMobile() {
-
-if (annat == 1) {
-
-if (document.getElementById("annanVilja").value != "") {
-
-document.getElementById("tackDivMobile").style.visibility = "visible";
-document.getElementById("tackDivMobile").style.opacity = 1.0;
-
-document.getElementById("tackHeaderMobile").innerHTML = "Tack " + document.getElementById("namn").value + "!";
-
-setTimeout(function(){ document.getElementById("tackDivMobile").style.visibility = "hidden"; }, 10000);
-setTimeout(function(){ document.getElementById("tackDivMobile").style.opacity = 0; }, 2000);
-}
-} else {
-
-document.getElementById("tackDivMobile").style.visibility = "visible";
-document.getElementById("tackDivMobile").style.opacity = 1.0;
-
-document.getElementById("tackHeaderMobile").innerHTML = "Tack " + document.getElementById("namn").value + "!";
-
-setTimeout(function(){ document.getElementById("tackDivMobile").style.visibility = "hidden"; }, 10000);
-setTimeout(function(){ document.getElementById("tackDivMobile").style.opacity = 0; }, 2000);
-}
 }
 </script>
 </div>
