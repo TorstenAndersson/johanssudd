@@ -244,7 +244,7 @@ Och sist men inte minst får du såklart dela din passion för sudd med andra su
 <br>
 <div>
 <h1><b>Skaffa dig ett jobb</b></h1>
-<form style="text-align: right; width: 50%; margin-left: 15%;" onsubmit="tack();" action="#" name="jobbformulär" method="POST" data-netlify="true">
+<form style="text-align: right; width: 50%; margin-left: 15%;" onsubmit="tack();" action="tack.html" name="jobbformulär" method="POST" data-netlify="true">
 <br> 
 
   <label class="formtext" for="namn"><b>Ditt namn:</b></label>
@@ -316,39 +316,10 @@ document.getElementById("annanVilja").removeAttribute("required");
 }
 
 function tack() {
-
-if (annat == 1) {
-
-if (document.getElementById("annanVilja").value != "") {
-
-document.getElementById("htmlTag").style.width = "100%";
-document.getElementById("htmlTag").style.height = "100%";
-document.getElementById("htmlTag").style.overflow = "hidden";
-
-document.getElementById("notTackDiv").style.visibility = "visible";
-document.getElementById("notTackDiv").style.opacity = 1.0;
-
-document.getElementById("tackDiv").style.visibility = "visible";
-
-document.getElementById("tackHeader").innerHTML = "Tack " + document.getElementById("namn").value + "!";
-document.getElementById("tackBody").innerHTML = "Vi överväger just nu din ansökan och kommer inom kort tid skicka vårat svar till " + document.getElementById("email").value + "!";
-setTimeout(function(){ window.location.href = "/"; }, 5000);
-}
-} else {
-
-document.getElementById("htmlTag").style.width = "100%";
-document.getElementById("htmlTag").style.height = "100%";
-document.getElementById("htmlTag").style.overflow = "hidden";
-
-document.getElementById("notTackDiv").style.visibility = "visible";
-document.getElementById("notTackDiv").style.opacity = 1.0;
-
-document.getElementById("tackDiv").style.visibility = "visible";
-
-document.getElementById("tackHeader").innerHTML = "Tack " + document.getElementById("namn").value + "!";
-document.getElementById("tackBody").innerHTML = "Vi överväger just nu din ansökan och kommer inom kort tid skicka vårat svar till " + document.getElementById("email").value + "!";
-setTimeout(function(){ window.location.href = "/"; }, 5000);
-}
+var tackHeader = "Tack " + document.getElementById("namn").value + "!";
+sessionStorage.setItem("tackHeaderStorage", tackHeader);
+var tackBody = document.getElementById("tackBody").innerHTML = "Vi överväger just nu din ansökan och kommer inom kort tid skicka vårat svar till " + document.getElementById("email").value + "!";
+sessionStorage.setItem("tackBodyStorage", tackBody);
 }
 </script>
 </div>
