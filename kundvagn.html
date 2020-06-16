@@ -558,40 +558,6 @@ if (typeof(Storage) !== "undefined") {
 <br>
 </div>
 
-<div class="w3-card-4" id="HylteCart">
-
-<h4 id="resultItems11" style="text-align: left; padding-left: 2%; padding-top: 45px; color: #342f2f;"></h4>
-<img id="resultImg11" width="60px" height="100px" style="margin-left: -45%; margin-top: -70px;"></img>
-<h4 id="resultPrices11" style="text-align: left; padding-left: 49%; margin-top: -63px; color: #342f2f;"></h4>
-<h4 id="resultAmount11" style="text-align: left; padding-left: 71.5%; margin-top: -40px; color: #342f2f;"></h4>
-<h4 id="resultTotal11" style="text-align: right; width: 97%; margin-top: -40px; color: #342f2f;"></h4>
-<script>
-// Check browser support
-if (typeof(Storage) !== "undefined") {
-  document.getElementById("resultItems11").innerHTML = sessionStorage.getItem("itemsHylte");
-  document.getElementById("resultImg11").src = sessionStorage.getItem("imgHylte");
-  document.getElementById("resultPrices11").innerHTML = sessionStorage.getItem("pricesHylte");
-  
-  var aHylte = sessionStorage.getItem("pricesForTotalHylte");
-  var bHylte = sessionStorage.getItem("amountHylte");
-  
-  
-  if (aHylte * bHylte !== 0) {
-  document.getElementById("resultTotal11").innerHTML = aHylte * bHylte + " kr";
-  document.getElementById("noItem").style.display = "block";
-  document.getElementById("item").style.display = "none";
-  } else {
-  document.getElementById("noItem").style.display = "none";
-  document.getElementById("item").style.display = "block";
-  }
-  document.getElementById("resultAmount11").innerHTML = sessionStorage.getItem("amountHylte");
-} else {
-}
-</script>
-<br>
-<br>
-</div>
-
 <div style="margin-top: 15px; padding-bottom: 15px; margin-left: -80%;">
 <label for="rabattKodArea" style="font-size: 20px;">Rabattkod? Skriv in här!</label>
 <br>
@@ -677,10 +643,6 @@ if (parseFloat(aMask) * parseFloat(bMask) > 0) {
 x = x + parseFloat(aMask) * parseFloat(bMask);
 }
 
-if (parseFloat(aHylte) * parseFloat(bHylte) > 0) {
-x = x + parseFloat(aHylte) * parseFloat(bHylte);
-}
-
 x = (Math.round(x * 100))/100;;
 
 if (sessionStorage.getItem("rabattUsed") == "true") {
@@ -762,9 +724,8 @@ document.getElementById("T_ShirtCart").style.display = sessionStorage.getItem("T
 document.getElementById("KepaCart").style.display = sessionStorage.getItem("Kepa");
 document.getElementById("HoodieCart").style.display = sessionStorage.getItem("Hoodie");
 document.getElementById("MaskCart").style.display = sessionStorage.getItem("Mask");
-document.getElementById("HylteCart").style.display = sessionStorage.getItem("Hylte");
 
-if (document.getElementById("GuldCart").style.display == "block" || document.getElementById("HoodCart").style.display == "block" || document.getElementById("BjörkebyCart").style.display == "block"  || document.getElementById("StaySafeCart").style.display == "block" || document.getElementById("JohanCart").style.display == "block" || document.getElementById("GlansCart").style.display == "block" || document.getElementById("T_ShirtCart").style.display == "block" || document.getElementById("KepaCart").style.display == "block" || document.getElementById("HoodieCart").style.display == "block" || document.getElementById("MaskCart").style.display == "block" || document.getElementById("HylteCart").style.display == "block"){
+if (document.getElementById("GuldCart").style.display == "block" || document.getElementById("HoodCart").style.display == "block" || document.getElementById("BjörkebyCart").style.display == "block"  || document.getElementById("StaySafeCart").style.display == "block" || document.getElementById("JohanCart").style.display == "block" || document.getElementById("GlansCart").style.display == "block" || document.getElementById("T_ShirtCart").style.display == "block" || document.getElementById("KepaCart").style.display == "block" || document.getElementById("HoodieCart").style.display == "block" || document.getElementById("MaskCart").style.display == "block"){
 document.getElementById("item").style.display = "none";
 document.getElementById("noItem").style.display = "block";
 }
@@ -1326,40 +1287,6 @@ if (typeof(Storage) !== "undefined") {
 <br>
 </div>
 
-<div class="w3-card-4" id="HylteCartMobile">
-
-<h4 id="resultItems11Mobile" style="text-align: left; padding-left: 2%; padding-top: 45px; color: #342f2f; font-size: 110%;"></h4>
-<img id="resultImg11Mobile" width="50px" height="90px" style="margin-left: -20%; margin-top: -70px;"></img>
-<h4 id="resultPrices11Mobile" style="text-align: left; padding-left: 49%; margin-top: -63px; color: #342f2f;"></h4>
-<h4 id="resultAmount11Mobile" style="text-align: left; padding-left: 71.5%; margin-top: -40px; color: #342f2f;"></h4>
-<h4 id="resultTotal11Mobile" style="text-align: right; width: 97%; margin-top: -40px; color: #342f2f;"></h4>
-<script>
-// Check browser support
-if (typeof(Storage) !== "undefined") {
-  document.getElementById("resultItems11Mobile").innerHTML = sessionStorage.getItem("itemsHylte");
-  document.getElementById("resultImg11Mobile").src = sessionStorage.getItem("imgHylte");
-  document.getElementById("resultPrices11Mobile").innerHTML = sessionStorage.getItem("pricesHylte");
-  
-  var aHylte = sessionStorage.getItem("pricesForTotalHylte");
-  var bHylte = sessionStorage.getItem("amountHylte");
-  
-  
-  if (aHylte * bHylte !== 0) {
-  document.getElementById("resultTotal11Mobile").innerHTML = aHylte * bHylte + " kr";
-  document.getElementById("noItemMobile").style.display = "block";
-  document.getElementById("itemMobile").style.display = "none";
-  } else {
-  document.getElementById("noItemMobile").style.display = "none";
-  document.getElementById("itemMobile").style.display = "block";
-  }
-  document.getElementById("resultAmount11Mobile").innerHTML = sessionStorage.getItem("amountHylte");
-} else {
-}
-</script>
-<br>
-<br>
-</div>
-
 <br>
 <br>
 
@@ -1449,9 +1376,6 @@ if (parseFloat(aMask) * parseFloat(bMask) > 0) {
 x = x + parseFloat(aMask) * parseFloat(bMask);
 }
 
-if (parseFloat(aHylte) * parseFloat(bHylte) > 0) {
-x = x + parseFloat(aHylte) * parseFloat(bHylte);
-}
 
 x = (Math.round(x * 100))/100;;
 
@@ -1534,9 +1458,8 @@ document.getElementById("T_ShirtCartMobile").style.display = sessionStorage.getI
 document.getElementById("KepaCartMobile").style.display = sessionStorage.getItem("Kepa");
 document.getElementById("HoodieCartMobile").style.display = sessionStorage.getItem("Hoodie");
 document.getElementById("MaskCartMobile").style.display = sessionStorage.getItem("Mask");
-document.getElementById("HylteCartMobile").style.display = sessionStorage.getItem("Hylte");
 
-if (document.getElementById("GuldCartMobile").style.display == "block" || document.getElementById("HoodCartMobile").style.display == "block" || document.getElementById("BjörkebyCartMobile").style.display == "block"  || document.getElementById("StaySafeCartMobile").style.display == "block" || document.getElementById("JohanCartMobile").style.display == "block" || document.getElementById("GlansCartMobile").style.display == "block" || document.getElementById("T_ShirtCartMobile").style.display == "block" || document.getElementById("KepaCartMobile").style.display == "block" || document.getElementById("HoodieCartMobile").style.display == "block" || document.getElementById("MaskCartMobile").style.display == "block" || document.getElementById("HylteCartMobile").style.display == "block"){
+if (document.getElementById("GuldCartMobile").style.display == "block" || document.getElementById("HoodCartMobile").style.display == "block" || document.getElementById("BjörkebyCartMobile").style.display == "block"  || document.getElementById("StaySafeCartMobile").style.display == "block" || document.getElementById("JohanCartMobile").style.display == "block" || document.getElementById("GlansCartMobile").style.display == "block" || document.getElementById("T_ShirtCartMobile").style.display == "block" || document.getElementById("KepaCartMobile").style.display == "block" || document.getElementById("HoodieCartMobile").style.display == "block" || document.getElementById("MaskCartMobile").style.display == "block"){
 document.getElementById("itemMobile").style.display = "none";
 document.getElementById("noItemMobile").style.display = "block";
 }

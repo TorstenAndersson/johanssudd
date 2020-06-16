@@ -31,49 +31,49 @@ display: none;
 var x;
 var animationInAction;
 
-function sudd_Stay_Safe_Added() {
+function HylteDonkeys_Added() {
 
-x = sessionStorage.getItem("yStaySafe") + 1;
-sessionStorage.setItem("yStaySafe", x);
+x = sessionStorage.getItem("yHylteDonkeys") + 1;
+sessionStorage.setItem("yHylteDonkeys", x);
 
 sessionStorage.setItem("amountOfItems", sessionStorage.getItem("amountOfItems") + "1");
 document.getElementById("amountOfItemsTotal").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
 
-document.getElementById("StaySafeAnimation").style.opacity = 0.1;
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.2; }, 10);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.3; }, 20);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.3; }, 30);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.4; }, 40);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.5; }, 50);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.6; }, 60);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.7; }, 70);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.8; }, 80);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.9; }, 90);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 1.0; }, 100);
+document.getElementById("HylteDonkeysAnimation").style.opacity = 0.1;
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.2; }, 10);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.3; }, 20);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.3; }, 30);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.4; }, 40);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.5; }, 50);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.6; }, 60);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.7; }, 70);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.8; }, 80);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.9; }, 90);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 1.0; }, 100);
 
 if (animationInAction !== "1") {
 
 animationInAction = "1";
 
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.9; }, 3100);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.8; }, 3110);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.7; }, 3120);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.6; }, 3130);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.5; }, 3140);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.4; }, 3150);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.3; }, 3160);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.2; }, 3170);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.1; }, 3180);
-setTimeout(function(){ document.getElementById("StaySafeAnimation").style.opacity = 0.0; }, 3190);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.9; }, 3100);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.8; }, 3110);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.7; }, 3120);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.6; }, 3130);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.5; }, 3140);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.4; }, 3150);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.3; }, 3160);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.2; }, 3170);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.1; }, 3180);
+setTimeout(function(){ document.getElementById("HylteDonkeysAnimation").style.opacity = 0.0; }, 3190);
 setTimeout(function(){ animationInAction = "0"; }, 3190);
 
 }
 
-sessionStorage.setItem("itemsStaySafe", "Sudd Stay Safe");
-sessionStorage.setItem("imgStaySafe", "Sudd%20Stay%20Safe.JPG");
-sessionStorage.setItem("pricesStaySafe", "49.99 kr");
-sessionStorage.setItem("pricesForTotalStaySafe", "49.99");
-sessionStorage.setItem("amountStaySafe", (sessionStorage.getItem("yStaySafe").length));
+sessionStorage.setItem("itemsHylte", "HylteDonkeys");
+sessionStorage.setItem("imgHylte", "Hyltedonkeys%20Shirt.png");
+sessionStorage.setItem("pricesHylte", "499.99 kr");
+sessionStorage.setItem("pricesForTotalHylte", "499.99");
+sessionStorage.setItem("amountHylte", (sessionStorage.getItem("yHylteDonkeys").length));
 
 if (sessionStorage.getItem("Glans") !== "block") {
 sessionStorage.setItem("Glans", "none");
@@ -81,9 +81,9 @@ sessionStorage.setItem("Glans", "none");
 if (sessionStorage.getItem("Johan") !== "block") {
 sessionStorage.setItem("Johan", "none");
 }
-
-sessionStorage.setItem("StaySafe", "block");
-
+if (sessionStorage.getItem("StaySafe") !== "block") {
+sessionStorage.setItem("StaySafe", "none");
+}
 if (sessionStorage.getItem("Björkeby") !== "block") {
 sessionStorage.setItem("Björkeby", "none");
 }
@@ -105,7 +105,7 @@ sessionStorage.setItem("Kepa", "none");
 if (sessionStorage.getItem("Mask") !== "block") {
 sessionStorage.setItem("Mask", "none");
 }
-
+sessionStorage.setItem("Hylte", "block");
 }
 </script>
 
@@ -116,7 +116,7 @@ sessionStorage.setItem("Mask", "none");
     <a class="w3-bar-item w3-xlarge" style="margin-top: 5px; padding-bottom: 15px;"> Johanssudd</a>
     <!-- Float links to the right. Hide them on small screens --> 
     <div class="w3-right w3-small w3-hide-small" style="margin-top: 15px">
-      <a href="johanssudd" class="w3-bar-item w3-button">HEM</a>
+      <a href="/" class="w3-bar-item w3-button">HEM</a>
       <a href="om-oss" class="w3-bar-item w3-button">OM OSS</a>
       <a href="vara-sudd" class="w3-bar-item w3-button">VÅRA SUDD</a>
       <a href="merchandise" class="w3-bar-item w3-button">MERCHANDISE</a>
@@ -175,7 +175,7 @@ font-family: sans-serif;
 font-size: 14px;
 text-align: center;
 }
-@media screen and (min-height: 866px) {
+@media screen and (min-height: 725px) {
 .footer {
 position: absolute;
 bottom: 0px;
@@ -189,33 +189,32 @@ width: 100%;
 <br>
 <br>
 <br>
-<div id="StaySafeAnimation" class="w3-card-4 animate1" style="width: 20%; margin-left: 79%; letter-spacing: 2px; opacity: 0.0;">
+<div id="HylteDonkeysAnimation" class="w3-card-4 animate1" style="width: 20%; margin-left: 79%; letter-spacing: 2px; opacity: 0.0;">
 <hr>
 <h2>Tack!</h2>
-<h4>Sudd Stay Safe</h4>
-<img src="Sudd%20Stay%20Safe.JPG" width="60%" height="50%">
+<h4>HylteDonkeys</h4>
+<img src="Hyltedonkeys%20Shirt.png" width="40%" height="25%">
 <h5>är nu i kundvagnen!</h5>
 <br>
 </div>
 <div style="margin-top: -250px;">
-<div style="width: 50%; margin-left: 25%; margin-top: -16%; letter-spacing: 1px;">
+<div style="width: 50%; margin-left: 25%; margin-top: -13%; letter-spacing: 1px;">
 <div style="padding-left: 50%;">
-<h1><b>Sudd Stay Safe</b></h1>
-<h5>Det är viktigt att hålla sig inomhus under dessa tider och till hjälp har vi på Johanssudd skapat ett sudd designat med precision anpassad för dessa tider vi lever i. </h5>
-<h2><b>49,99 kr</b></h2>
+<h1><b>HylteDonkeys</b></h1>
+<h5>Det officiella fan-tröjan för vår sponsor HylteDonkeys!</h5>
+<h2><b>499,99 kr</b></h2>
 <br>
-<button onclick="sudd_Stay_Safe_Added()" class="button" style="background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
+<button onclick="HylteDonkeys_Added()" class="button" style="margin: auto; background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
 </div>
 </div>
 <div style="width: 50%; margin-left: 25%;">
-<img style="margin-left: -55%; margin-top: -350px;" src="Sudd%20Stay%20Safe.JPG" alt="Sudd Stay Safe">
+<img style="margin-left: -65%; margin-top: -350px;" src="Hyltedonkeys%20Shirt.png" alt="HylteDonkeys Shirt">
 <br>
 <br>
 <br>
 <br>
 </div>
 </div>
-<br>
 </header>
 
 <div class="w3-card-4 footer" style="background-color:rgba(0,0,0,.15);">
@@ -227,6 +226,13 @@ width: 100%;
 <br>
 </div>
 </div>
+
+
+
+
+
+
+
 
 
 
@@ -370,7 +376,7 @@ document.getElementById("amountOfItemsTotalMobile").innerHTML = sessionStorage.g
 var x;
 var inAction = 0;
 
-function sudd_Stay_Safe_AddedMobile() {
+function HylteDonkeys_AddedMobile() {
 
 document.getElementById("br").style.display = "none";
 sessionStorage.setItem("BR", "none");
@@ -385,18 +391,18 @@ setTimeout(function(){ if (inAction == 0) {document.getElementById("kundvagnButt
 
 if (inAction == 0) {document.getElementById("kundvagnButton").innerHTML = "Lägg i kundvagnen";}
 
-x = sessionStorage.getItem("yStaySafe") + 1;
-sessionStorage.setItem("yStaySafe", x);
+x = sessionStorage.getItem("yHylteDonkeys") + 1;
+sessionStorage.setItem("yHylteDonkeys", x);
 
 sessionStorage.setItem("amountOfItems", sessionStorage.getItem("amountOfItems") + "1");
 document.getElementById("amountOfItemsTotalMobile").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
 document.getElementById("amountOfItemsTotal").innerHTML = sessionStorage.getItem("amountOfItems").length - 4;
 
-sessionStorage.setItem("itemsStaySafe", "Sudd Stay Safe");
-sessionStorage.setItem("imgStaySafe", "Sudd%20Stay%20Safe.JPG");
-sessionStorage.setItem("pricesStaySafe", "49.99 kr");
-sessionStorage.setItem("pricesForTotalStaySafe", "49.99");
-sessionStorage.setItem("amountStaySafe", (sessionStorage.getItem("yStaySafe").length));
+sessionStorage.setItem("itemsHylte", "HylteDonkeys");
+sessionStorage.setItem("imgHylte", "Hyltedonkeys%20Shirt.png");
+sessionStorage.setItem("pricesHylte", "499.99 kr");
+sessionStorage.setItem("pricesForTotalHylte", "499.99");
+sessionStorage.setItem("amountHylte", (sessionStorage.getItem("yHylteDonkeys").length));
 
 if (sessionStorage.getItem("Glans") !== "block") {
 sessionStorage.setItem("Glans", "none");
@@ -404,9 +410,9 @@ sessionStorage.setItem("Glans", "none");
 if (sessionStorage.getItem("Johan") !== "block") {
 sessionStorage.setItem("Johan", "none");
 }
-
-sessionStorage.setItem("StaySafe", "block");
-
+if (sessionStorage.getItem("StaySafe") !== "block") {
+sessionStorage.setItem("StaySafe", "none");
+}
 if (sessionStorage.getItem("Björkeby") !== "block") {
 sessionStorage.setItem("Björkeby", "none");
 }
@@ -429,6 +435,8 @@ if (sessionStorage.getItem("Mask") !== "block") {
 sessionStorage.setItem("Mask", "none");
 }
 
+sessionStorage.setItem("HylteDonkeys", "block");
+
 }
 </script>
   
@@ -438,13 +446,13 @@ sessionStorage.setItem("Mask", "none");
 <br id="br">
 <br>
 <br>
-<div style="width: 95%; margin: auto; letter-spacing: 1px;">
-<h1><b>Sudd Stay Safe</b></h1>
-<img src="Sudd%20Stay%20Safe.JPG" alt="Sudd Stay Safe">
-<h5>Det är viktigt att hålla sig inomhus under dessa tider och till hjälp har vi på Johanssudd skapat ett sudd designat med precision anpassad för dessa tider vi lever i.</h5>
-<h2><b>49,99 kr</b></h2>
+<div style="width: 100%; margin: auto; letter-spacing: 1px;">
+<h1><b>HylteDonkeys</b></h1>
+<img src="Hyltedonkeys%20Shirt.png" alt="HylteDonkeys Shirt">
+<h5>Det officiella fan-tröjan för vår sponsor HylteDonkeys!</h5>
+<h2><b>499,99 kr</b></h2>
 <br>
-<button onclick="sudd_Stay_Safe_AddedMobile()" id="kundvagnButton" class="button" style="background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
+<button onclick="HylteDonkeys_AddedMobile()" id="kundvagnButton" class="button" style="background-color: #393939; color: white; border: none; color: white; height: 60px; width: 150px; cursor: pointer; font-size: 20px; min-width: 256px;">Lägg i kundvagnen</button>
 <br>
 <br>
 </div>
