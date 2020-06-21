@@ -664,8 +664,10 @@ var inAction2 = 0;
 
 input.addEventListener("keyup", function(event) {
 
-/*
   if (event.keyCode === 13) {
+  
+  /*
+  
 if (input.value == rabattkod) {
 
 if (sessionStorage.getItem("rabattUsed") == "true") {
@@ -694,7 +696,6 @@ document.getElementById("totalPriceOld").style.visibility = "visible";
 document.getElementById("totalPrice").innerHTML = "Totalt: " + x + " kr";
 
 }
-}
 */
 
 if (!(input.value == "hnasdkjnaskjdnasjkdnasjkd")) {
@@ -708,6 +709,7 @@ setTimeout(function(){ inAction2 = inAction2 - 1; }, 5000);
 setTimeout(function(){ if (inAction2 == 0) {document.getElementById("användellerinte").style.visibility = "hidden";}}, 5000);
 
 if (inAction2 == 0) {document.getElementById("användellerinte").style.visibility = "hidden";}
+}
 }
 });
 </script>
@@ -1398,10 +1400,12 @@ var input = document.getElementById("rabattKodAreaMobile");
 var inAction = 0;
 var inAction2 = 0;
 
-/*
 
 input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
+
+/*
+
 if (input.value == "rabattkod") {
 
 if (sessionStorage.getItem("rabattUsed") == "true") {
@@ -1430,7 +1434,6 @@ document.getElementById("totalPriceOldMobile").style.visibility = "visible";
 document.getElementById("totalPriceMobile").innerHTML = "Totalt: " + x + " kr";
 
 }
-}
 
 */
 
@@ -1445,6 +1448,7 @@ setTimeout(function(){ inAction2 = inAction2 - 1; }, 5000);
 setTimeout(function(){ if (inAction2 == 0) {document.getElementById("användellerinteMobile").style.visibility = "hidden";}}, 5000);
 
 if (inAction2 == 0) {document.getElementById("användellerinteMobile").style.visibility = "hidden";}
+}
 }
 });
 </script>
