@@ -663,8 +663,10 @@ var inAction = 0;
 var inAction2 = 0;
 
 input.addEventListener("keyup", function(event) {
+
+/*
   if (event.keyCode === 13) {
-if (input.value == "AgHjdLLiYi" || input.value == "DlöSkdKUO" || input.value == "HgFddHKfk" || input.value == "MlBjKGTJDj" || input.value == "ÖpjHGsjLdJ" || input.value == "WhKdjKfjJfk" || input.value == "OdjHdkHfjJ" || input.value == "QejLdkIfjkDj" || input.value == "EjdJdkJfkBf" || input.value == "KJdjlBflLdvI" || input.value == "NutAkdkhlK" || input.value == "ÅpKduDhkK" || input.value == "YejBdjjJdnK" || input.value == "VNdjJjfkBfk" || input.value == "IdjJjjdjkkdjfj") {
+if (input.value == rabattkod) {
 
 if (sessionStorage.getItem("rabattUsed") == "true") {
 document.getElementById("användellerinte").innerHTML = "Rabattkod redan använd!";
@@ -685,7 +687,7 @@ document.getElementById("användellerinte").style.color = "#32CD32";
 document.getElementById("användellerinte").style.visibility = "visible";
 setTimeout(function(){document.getElementById("användellerinte").style.visibility = "hidden";}, 5000);
 sessionStorage.setItem("rabattUsed", "true");
-x = x * 0.8;
+x = x - 5;
 x = (Math.round(x * 100))/100;
 document.getElementById("totalPriceOld").innerHTML = document.getElementById("totalPrice").innerHTML;
 document.getElementById("totalPriceOld").style.visibility = "visible";
@@ -693,8 +695,9 @@ document.getElementById("totalPrice").innerHTML = "Totalt: " + x + " kr";
 
 }
 }
+*/
 
-if (!(input.value == "AgHjdLLiYi" || input.value == "DlöSkdKUO" || input.value == "HgFddHKfk" || input.value == "MlBjKGTJDj" || input.value == "ÖpjHGsjLdJ" || input.value == "WhKdjKfjJfk" || input.value == "OdjHdkHfjJ" || input.value == "QejLdkIfjkDj" || input.value == "EjdJdkJfkBf" || input.value == "KJdjlBflLdvI" || input.value == "NutAkdkhlK" || input.value == "ÅpKduDhkK" || input.value == "YejBdjjJdnK" || input.value == "VNdjJjfkBfk" || input.value == "IdjJjjdjkkdjfj")) {
+if (!(input.value == "hnasdkjnaskjdnasjkdnasjkd")) {
 document.getElementById("användellerinte").innerHTML = "Rabattkod inte giltig";
 document.getElementById("användellerinte").style.color = "#FF0000";
 document.getElementById("användellerinte").style.visibility = "visible";
@@ -1396,9 +1399,11 @@ var input = document.getElementById("rabattKodAreaMobile");
 var inAction = 0;
 var inAction2 = 0;
 
+/*
+
 input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
-if (input.value == "AgHjdLLiYi" || input.value == "DlöSkdKUO" || input.value == "HgFddHKfk" || input.value == "MlBjKGTJDj" || input.value == "ÖpjHGsjLdJ" || input.value == "WhKdjKfjJfk" || input.value == "OdjHdkHfjJ" || input.value == "QejLdkIfjkDj" || input.value == "EjdJdkJfkBf" || input.value == "KJdjlBflLdvI" || input.value == "NutAkdkhlK" || input.value == "ÅpKduDhkK" || input.value == "YejBdjjJdnK" || input.value == "VNdjJjfkBfk" || input.value == "IdjJjjdjkkdjfj") {
+if (input.value == "rabattkod") {
 
 if (sessionStorage.getItem("rabattUsed") == "true") {
 document.getElementById("användellerinteMobile").innerHTML = "Rabattkod redan använd!";
@@ -1428,7 +1433,9 @@ document.getElementById("totalPriceMobile").innerHTML = "Totalt: " + x + " kr";
 }
 }
 
-if (!(input.value == "AgHjdLLiYi" || input.value == "DlöSkdKUO" || input.value == "HgFddHKfk" || input.value == "MlBjKGTJDj" || input.value == "ÖpjHGsjLdJ" || input.value == "WhKdjKfjJfk" || input.value == "OdjHdkHfjJ" || input.value == "QejLdkIfjkDj" || input.value == "EjdJdkJfkBf" || input.value == "KJdjlBflLdvI" || input.value == "NutAkdkhlK" || input.value == "ÅpKduDhkK" || input.value == "YejBdjjJdnK" || input.value == "VNdjJjfkBfk" || input.value == "IdjJjjdjkkdjfj")) {
+*/
+
+if (!(input.value == "asndjkhnasjkdnsajkdnjask")) {
 document.getElementById("användellerinteMobile").innerHTML = "Rabattkod inte giltig";
 document.getElementById("användellerinteMobile").style.color = "#FF0000";
 document.getElementById("användellerinteMobile").style.visibility = "visible";
