@@ -244,7 +244,7 @@ Och sist men inte minst får du såklart dela din passion för sudd med andra su
 <br>
 <div>
 <h1><b>Skaffa dig ett jobb</b></h1>
-<form style="text-align: right; width: 50%; margin-left: 15%;" action="tack.html" name="jobbformulär" method="POST" data-netlify="true">
+<form style="text-align: right; width: 50%; margin-left: 15%;" onsubmit="javascript:tack()" action="tack.html" name="jobbformulär" method="POST" data-netlify="true">
 <br> 
 
   <label class="formtext" for="namn"><b>Ditt namn:</b></label>
@@ -313,7 +313,7 @@ document.getElementById("annanVilja").removeAttribute("required");
 function tack() {
 var tackHeader = "Tack " + document.getElementById("namn").value + "!";
 sessionStorage.setItem("tackHeaderStorage", tackHeader);
-var tackBody = document.getElementById("tackBody").innerHTML = "Vi överväger just nu din ansökan och kommer inom kort tid skicka vårat svar till " + document.getElementById("email").value + "!";
+var tackBody = "Vi överväger just nu din ansökan och kommer inom kort tid skicka vårat svar till " + document.getElementById("email").value + "!";
 sessionStorage.setItem("tackBodyStorage", tackBody);
 }
 </script>
